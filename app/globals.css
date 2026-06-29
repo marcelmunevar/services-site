@@ -13,18 +13,6 @@
 }
 
 body {
-  background:
-    radial-gradient(
-      circle at 12% 8%,
-      rgba(255, 127, 80, 0.34),
-      transparent 26%
-    ),
-    radial-gradient(
-      circle at 90% 24%,
-      rgba(18, 150, 120, 0.2),
-      transparent 25%
-    ),
-    linear-gradient(170deg, #fbf8f2 10%, #eff4f2 48%, #eef0f8 100%);
   color: var(--foreground);
   font-family: var(--font-body), "Segoe UI", sans-serif;
 }
@@ -36,23 +24,78 @@ body {
 
 .page-wrap {
   position: relative;
+  isolation: isolate;
+}
+
+.page-wrap::before,
+.page-wrap::after {
+  content: "";
+  position: fixed;
+  inset: -18vh -15vw;
+  pointer-events: none;
+  z-index: -2;
+  will-change: transform;
 }
 
 .page-wrap::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
+  background:
+    radial-gradient(
+      38% 30% at 14% 18%,
+      rgba(255, 131, 82, 0.26),
+      rgba(255, 131, 82, 0)
+    ),
+    radial-gradient(
+      40% 34% at 82% 22%,
+      rgba(30, 132, 112, 0.2),
+      rgba(30, 132, 112, 0)
+    ),
+    radial-gradient(
+      44% 32% at 58% 90%,
+      rgba(22, 99, 158, 0.15),
+      rgba(22, 99, 158, 0)
+    );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation: parallax-drift-slow 22s ease-in-out infinite alternate;
+}
+
+.page-wrap::after {
   z-index: -1;
-  background-image:
-    linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(
-    ellipse at center,
-    rgba(0, 0, 0, 0.65),
-    transparent 80%
-  );
+  background:
+    radial-gradient(
+      30% 24% at 22% 82%,
+      rgba(243, 157, 80, 0.18),
+      rgba(243, 157, 80, 0)
+    ),
+    radial-gradient(
+      30% 26% at 86% 70%,
+      rgba(7, 110, 127, 0.14),
+      rgba(7, 110, 127, 0)
+    );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: blur(2px);
+  animation: parallax-drift-fast 14s ease-in-out infinite alternate;
+}
+
+@keyframes parallax-drift-slow {
+  from {
+    transform: translate3d(-1.5vw, -1vh, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(1.5vw, 1.8vh, 0) scale(1.04);
+  }
+}
+
+@keyframes parallax-drift-fast {
+  from {
+    transform: translate3d(1.2vw, -0.8vh, 0) scale(1.02);
+  }
+
+  to {
+    transform: translate3d(-1.2vw, 1.2vh, 0) scale(1.06);
+  }
 }
 
 @keyframes rise-in {
@@ -77,7 +120,9 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .reveal,
-  .delay-1 {
+  .delay-1,
+  .page-wrap::before,
+  .page-wrap::after {
     animation: none;
   }
 }
