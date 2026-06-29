@@ -129,7 +129,7 @@ export default function EnterpriseConsultingPage() {
           <h2 className="text-2xl font-semibold text-slate-950">
             Consulting areas
           </h2>
-          <ul className="mt-4 grid gap-2 text-sm text-slate-700">
+          <ul className="dot-list mt-4 space-y-2 text-sm text-slate-700">
             <li>Website migration planning and implementation support</li>
             <li>Landing page build systems and release workflows</li>
             <li>Performance optimization strategy and execution</li>
@@ -143,7 +143,7 @@ export default function EnterpriseConsultingPage() {
           <h2 className="text-2xl font-semibold text-slate-950">
             Engagement options
           </h2>
-          <ul className="mt-4 grid gap-2 text-sm text-slate-700">
+          <ul className="dot-list mt-4 space-y-2 text-sm text-slate-700">
             <li>Project-based advisory and implementation support</li>
             <li>Part-time embedded consulting</li>
             <li>Technical lead coverage for launch-critical periods</li>

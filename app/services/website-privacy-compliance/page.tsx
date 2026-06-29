@@ -5,11 +5,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
 export const metadata: Metadata = {
   title: "Website Privacy Compliance Services",
   description:
-    "Website privacy compliance services including cookie consent audits, Consent Mode v2 implementation, OneTrust setup, and Google Tag Manager consent fixes.",
+    "Website privacy compliance services including cookie consent audits, consent implementation, OneTrust setup, and Google Tag Manager consent fixes.",
   keywords: [
     "website privacy compliance",
     "cookie consent audit",
-    "Consent Mode v2 implementation",
+    "consent implementation",
     "OneTrust setup",
     "Google Tag Manager consent fixes",
   ],
@@ -128,9 +128,9 @@ export default function PrivacyCompliancePage() {
           <h2 className="text-2xl font-semibold text-slate-950">
             Included services
           </h2>
-          <ul className="mt-4 grid gap-2 text-sm text-slate-700">
+          <ul className="dot-list mt-4 space-y-2 text-sm text-slate-700">
             <li>Cookie consent audits and remediation planning</li>
-            <li>Consent Mode v2 implementation and validation</li>
+            <li>Consent implementation and validation</li>
             <li>OneTrust or CookiePro setup and configuration</li>
             <li>Google Tag Manager consent fixes and governance</li>
             <li>Privacy policy implementation support</li>
@@ -140,7 +140,7 @@ export default function PrivacyCompliancePage() {
 
         <article className="delay-1 reveal rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-[0_16px_55px_rgba(2,8,20,0.08)]">
           <h2 className="text-2xl font-semibold text-slate-950">Ideal for</h2>
-          <ul className="mt-4 grid gap-2 text-sm text-slate-700">
+          <ul className="dot-list mt-4 space-y-2 text-sm text-slate-700">
             <li>Marketing teams running paid media across regions</li>
             <li>
               Organizations using multiple consent tools or tag containers
@@ -183,7 +183,7 @@ export default function PrivacyCompliancePage() {
             </p>
             <p className="display-font mt-2 text-3xl text-slate-950">$2,000+</p>
             <p className="mt-2 text-sm text-slate-700">
-              Consent Mode v2, CMP configuration, and GTM consent fixes.
+              Consent tooling, CMP configuration, and GTM consent fixes.
             </p>
           </article>
           <article className="rounded-2xl border border-slate-200 bg-white p-5">

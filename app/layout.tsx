@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "Professional website services for privacy compliance, care plans, and consulting, backed by 7+ years of enterprise implementation experience across multi-subsidiary organizations.",
   keywords: [
     "website privacy compliance",
-    "Consent Mode v2",
+    "consent implementation",
     "cookie consent audit",
     "website care plans",
     "enterprise web consulting",
@@ -81,7 +81,9 @@ export default function RootLayout({
       lang="en"
       className={`${bodyFont.variable} ${displayFont.variable} ${monoFont.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full">
+        <div className="page-wrap flex min-h-full flex-col">{children}</div>
+      </body>
     </html>
   );
 }

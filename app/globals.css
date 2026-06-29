@@ -118,6 +118,23 @@ body {
   animation-delay: 0.15s;
 }
 
+.dot-list,
+.service-list {
+  list-style: disc outside !important;
+  padding-left: 1.25rem;
+}
+
+.dot-list li,
+.service-list li {
+  display: list-item !important;
+}
+
+.dot-list li::marker,
+.service-list li::marker {
+  color: #0d9488;
+  font-size: 1.08em;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   .delay-1,

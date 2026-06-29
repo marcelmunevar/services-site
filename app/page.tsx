@@ -52,7 +52,7 @@ export default function Home() {
       ],
     },
     knowsAbout: [
-      "Consent Mode v2",
+      "Consent implementation",
       "Cookie consent management",
       "Google Tag Manager",
       "Website accessibility",
@@ -68,7 +68,7 @@ export default function Home() {
       value: "Technical implementation and ongoing assurance",
       points: [
         "Cookie consent audits",
-        "Consent Mode v2 implementation",
+        "Consent implementation",
         "OneTrust/CookiePro setup",
         "Privacy policy implementation",
         "Google Tag Manager consent fixes",
@@ -124,7 +124,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="page-wrap">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -224,94 +224,12 @@ export default function Home() {
                 and consistent.
               </p>
 
-              <ul className="grid gap-2 text-sm text-slate-700">
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-teal-600" />
-                  <span>Multi-site and multi-team rollout planning</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-teal-600" />
-                  <span>Consent and tag governance across subsidiaries</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-teal-600" />
-                  <span>
-                    Clear documentation and handoff for internal teams
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-teal-600" />
-                  <span>Implementation aligned to enterprise constraints</span>
-                </li>
+              <ul className="dot-list space-y-2 text-sm text-slate-700">
+                <li>Multi-site and multi-team rollout planning</li>
+                <li>Consent and tag governance across subsidiaries</li>
+                <li>Clear documentation and handoff for internal teams</li>
+                <li>Implementation aligned to enterprise constraints</li>
               </ul>
-            </div>
-          </div>
-        </section>
-
-        <section className="delay-1 reveal rounded-[1.8rem] border border-slate-200 bg-slate-950 p-7 text-slate-100 shadow-[0_16px_55px_rgba(2,8,20,0.22)] sm:p-10">
-          <div className="grid gap-6 lg:grid-cols-[1fr_1.2fr]">
-            <div>
-              <p className="text-xs font-bold tracking-[0.18em] text-slate-300 uppercase">
-                Case Snapshot
-              </p>
-              <h2 className="display-font mt-3 text-3xl sm:text-4xl">
-                Enterprise compliance rollout (anonymized)
-              </h2>
-            </div>
-
-            <div className="space-y-4 text-sm leading-relaxed text-slate-200">
-              <p>
-                <span className="font-semibold text-white">Context: </span>
-                Large enterprise with multiple subsidiaries, each with different
-                teams, platforms, and publishing workflows.
-              </p>
-              <p>
-                <span className="font-semibold text-white">
-                  Work delivered:{" "}
-                </span>
-                Consent tooling implementation, GTM consent fixes, rollout
-                coordination, and documentation standards for internal teams.
-              </p>
-              <p>
-                <span className="font-semibold text-white">Result: </span>
-                More consistent compliance execution across brands, clearer
-                ownership, and easier maintenance after handoff.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="reveal rounded-[1.8rem] border border-slate-200 bg-white/90 p-7 shadow-[0_16px_55px_rgba(2,8,20,0.08)] sm:p-10">
-          <div className="grid gap-6 lg:grid-cols-[1fr_1.2fr]">
-            <div>
-              <p className="text-xs font-bold tracking-[0.18em] text-slate-500 uppercase">
-                Case Snapshot
-              </p>
-              <h2 className="display-font mt-3 text-3xl text-slate-950 sm:text-4xl">
-                Enterprise accessibility and performance support (anonymized)
-              </h2>
-            </div>
-
-            <div className="space-y-4 text-sm leading-relaxed text-slate-700">
-              <p>
-                <span className="font-semibold text-slate-900">Context: </span>
-                Business-critical marketing pages needed stronger accessibility
-                coverage and better load performance while multiple teams were
-                shipping in parallel.
-              </p>
-              <p>
-                <span className="font-semibold text-slate-900">
-                  Work delivered:{" "}
-                </span>
-                Accessibility remediation planning, frontend implementation
-                support, performance-focused page updates, and repeatable QA
-                checks for ongoing releases.
-              </p>
-              <p>
-                <span className="font-semibold text-slate-900">Result: </span>
-                Improved user experience, lower risk on key journeys, and a
-                clearer process teams could continue after project handoff.
-              </p>
             </div>
           </div>
         </section>
@@ -339,12 +257,9 @@ export default function Home() {
                   {track.title}
                 </h3>
 
-                <ul className="mt-5 grid gap-2 text-sm text-slate-700">
+                <ul className="dot-list mt-5 space-y-2 text-sm text-slate-700">
                   {track.points.map((point) => (
-                    <li key={point} className="flex items-start gap-2">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-teal-600" />
-                      <span>{point}</span>
-                    </li>
+                    <li key={point}>{point}</li>
                   ))}
                 </ul>
 
@@ -411,6 +326,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-    </div>
+    </>
   );
 }

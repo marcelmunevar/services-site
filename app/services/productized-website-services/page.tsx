@@ -128,7 +128,7 @@ export default function ProductizedServicesPage() {
           <h2 className="text-2xl font-semibold text-slate-950">
             Available deliverables
           </h2>
-          <ul className="mt-4 grid gap-2 text-sm text-slate-700">
+          <ul className="dot-list mt-4 space-y-2 text-sm text-slate-700">
             <li>Website privacy compliance audits</li>
             <li>Accessibility reports with prioritized fixes</li>
             <li>Cookie inventory reports and tag documentation</li>
@@ -140,7 +140,7 @@ export default function ProductizedServicesPage() {
 
         <article className="delay-1 reveal rounded-3xl border border-slate-200 bg-white/90 p-6 shadow-[0_16px_55px_rgba(2,8,20,0.08)]">
           <h2 className="text-2xl font-semibold text-slate-950">Best for</h2>
-          <ul className="mt-4 grid gap-2 text-sm text-slate-700">
+          <ul className="dot-list mt-4 space-y-2 text-sm text-slate-700">
             <li>
               Teams that need a clear scope before committing to retainers
             </li>

@@ -16,7 +16,7 @@ const services = [
     title: "Website Privacy Compliance",
     href: "/services/website-privacy-compliance",
     description:
-      "Cookie consent audits, Consent Mode v2 implementation, OneTrust setup, privacy policy implementation, and GTM consent fixes.",
+      "Cookie consent audits, consent implementation, OneTrust setup, privacy policy implementation, and GTM consent fixes.",
   },
   {
     title: "Website Care Plans",

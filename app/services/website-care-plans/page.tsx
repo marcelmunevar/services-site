@@ -125,7 +125,7 @@ export default function WebsiteCarePlansPage() {
           <h2 className="text-2xl font-semibold text-slate-950">
             What is covered
           </h2>
-          <ul className="mt-4 grid gap-2 text-sm text-slate-700">
+          <ul className="dot-list mt-4 space-y-2 text-sm text-slate-700">
             <li>WordPress core, plugin, and theme updates</li>
             <li>Security monitoring and incident response support</li>
             <li>Automated backups and restore checks</li>
@@ -139,7 +139,7 @@ export default function WebsiteCarePlansPage() {
           <h2 className="text-2xl font-semibold text-slate-950">
             Why teams choose care plans
           </h2>
-          <ul className="mt-4 grid gap-2 text-sm text-slate-700">
+          <ul className="dot-list mt-4 space-y-2 text-sm text-slate-700">
             <li>Reduce risk of security and uptime issues</li>
             <li>Avoid delayed updates and technical debt</li>
             <li>Get predictable support without hiring in-house</li>
