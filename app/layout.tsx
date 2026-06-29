@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleTagManager } from "@next/third-parties/google";
 import { IBM_Plex_Mono, Manrope, Syne } from "next/font/google";
 import "./globals.css";
 
@@ -76,13 +77,87 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const year = new Date().getFullYear();
+
   return (
     <html
       lang="en"
       className={`${bodyFont.variable} ${displayFont.variable} ${monoFont.variable} h-full antialiased`}
     >
       <body className="min-h-full">
-        <div className="page-wrap flex min-h-full flex-col">{children}</div>
+        <GoogleTagManager gtmId="GTM-KJCXXH7F" />
+        <div className="page-wrap flex min-h-full flex-col">
+          <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl">
+            <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10">
+              <a
+                href="/"
+                className="display-font text-xl text-slate-950 sm:text-2xl"
+              >
+                Web Growth Studio
+              </a>
+
+              <nav
+                aria-label="Main"
+                className="flex items-center gap-2 sm:gap-4"
+              >
+                <a
+                  href="/"
+                  className="rounded-full px-3 py-1.5 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-slate-950"
+                >
+                  Home
+                </a>
+                <a
+                  href="/services"
+                  className="rounded-full px-3 py-1.5 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-slate-950"
+                >
+                  Services
+                </a>
+                <a
+                  href="/contact-us"
+                  className="rounded-full bg-slate-950 px-4 py-1.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+                >
+                  Contact
+                </a>
+              </nav>
+            </div>
+          </header>
+
+          {children}
+
+          <footer className="mt-14 border-t border-slate-200/80 bg-white/85 py-8 backdrop-blur-sm">
+            <div className="mx-auto flex w-full max-w-6xl flex-col gap-5 px-5 sm:px-8 lg:px-10">
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold text-slate-700">
+                <a
+                  href="/privacy-policy"
+                  className="transition-colors hover:text-slate-950 hover:underline"
+                >
+                  Privacy Policy
+                </a>
+                <a
+                  href="/terms"
+                  className="transition-colors hover:text-slate-950 hover:underline"
+                >
+                  Terms
+                </a>
+                <a
+                  href="/contact-us"
+                  className="transition-colors hover:text-slate-950 hover:underline"
+                >
+                  Contact Us
+                </a>
+                <a
+                  href="/cookie-settings"
+                  className="transition-colors hover:text-slate-950 hover:underline"
+                >
+                  Cookie Settings
+                </a>
+              </div>
+              <p className="text-sm text-slate-600">
+                {year} Web Growth Studio. All rights reserved.
+              </p>
+            </div>
+          </footer>
+        </div>
       </body>
     </html>
   );
