@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import TrackableCTA from "../../components/TrackableCTA";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
 
@@ -90,9 +92,9 @@ export default function EnterpriseConsultingPage() {
       <nav aria-label="Breadcrumb" className="text-sm text-slate-600">
         <ol className="flex items-center gap-2">
           <li>
-            <a href="/" className="transition-colors hover:text-slate-900">
+            <Link href="/" className="transition-colors hover:text-slate-900">
               Home
-            </a>
+            </Link>
           </li>
           <li>/</li>
           <li>
@@ -151,12 +153,14 @@ export default function EnterpriseConsultingPage() {
               Cross-functional collaboration with legal and compliance teams
             </li>
           </ul>
-          <a
+          <TrackableCTA
             href="/#contact"
+            eventName="consultation_cta_clicked"
+            eventProperties={{ service: "enterprise-web-consulting" }}
             className="mt-6 inline-flex rounded-full bg-slate-950 px-5 py-2 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
           >
             Discuss enterprise consulting support
-          </a>
+          </TrackableCTA>
         </article>
       </section>
 

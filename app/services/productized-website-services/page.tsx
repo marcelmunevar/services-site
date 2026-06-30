@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import TrackableCTA from "../../components/TrackableCTA";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
 
@@ -90,9 +92,9 @@ export default function ProductizedServicesPage() {
       <nav aria-label="Breadcrumb" className="text-sm text-slate-600">
         <ol className="flex items-center gap-2">
           <li>
-            <a href="/" className="transition-colors hover:text-slate-900">
+            <Link href="/" className="transition-colors hover:text-slate-900">
               Home
-            </a>
+            </Link>
           </li>
           <li>/</li>
           <li>
@@ -150,12 +152,14 @@ export default function ProductizedServicesPage() {
               Leaders who want repeatable deliverables for internal rollout
             </li>
           </ul>
-          <a
+          <TrackableCTA
             href="/#contact"
+            eventName="consultation_cta_clicked"
+            eventProperties={{ service: "productized-website-services" }}
             className="mt-6 inline-flex rounded-full bg-slate-950 px-5 py-2 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
           >
             Request a productized service package
-          </a>
+          </TrackableCTA>
         </article>
       </section>
 

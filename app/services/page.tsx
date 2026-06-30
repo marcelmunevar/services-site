@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import TrackableCTA from "../components/TrackableCTA";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
 
@@ -68,9 +70,9 @@ export default function ServicesIndexPage() {
       <nav aria-label="Breadcrumb" className="text-sm text-slate-600">
         <ol className="flex items-center gap-2">
           <li>
-            <a href="/" className="transition-colors hover:text-slate-900">
+            <Link href="/" className="transition-colors hover:text-slate-900">
               Home
-            </a>
+            </Link>
           </li>
           <li>/</li>
           <li className="font-semibold text-slate-900">Services</li>
@@ -103,12 +105,14 @@ export default function ServicesIndexPage() {
             <p className="mt-3 text-sm leading-relaxed text-slate-700">
               {service.description}
             </p>
-            <a
+            <TrackableCTA
               href={service.href}
+              eventName="service_card_clicked"
+              eventProperties={{ service: service.title }}
               className="mt-5 inline-flex rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-100"
             >
               View service details
-            </a>
+            </TrackableCTA>
           </article>
         ))}
       </section>

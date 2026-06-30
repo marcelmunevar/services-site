@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import TrackableCTA from "../components/TrackableCTA";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -24,12 +25,14 @@ export default function ContactUsPage() {
         <h2 className="text-xl font-semibold text-slate-950">Email</h2>
         <p className="mt-2 text-slate-700">
           Send inquiries to
-          <a
+          <TrackableCTA
             className="ml-1 font-semibold text-slate-900 underline"
             href="mailto:hello@example.com"
+            eventName="contact_email_clicked"
+            eventProperties={{ source: "contact_us_page" }}
           >
             hello@example.com
-          </a>
+          </TrackableCTA>
           .
         </p>
       </section>

@@ -1,3 +1,5 @@
+import TrackableCTA from "./components/TrackableCTA";
+
 export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
@@ -152,18 +154,20 @@ export default function Home() {
                 multi-subsidiary organizations
               </p>
               <div className="flex flex-wrap gap-3">
-                <a
+                <TrackableCTA
                   href="#services"
+                  eventName="explore_services_clicked"
                   className="inline-flex items-center rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
                 >
                   Explore Services
-                </a>
-                <a
+                </TrackableCTA>
+                <TrackableCTA
                   href="#contact"
+                  eventName="book_discovery_call_clicked"
                   className="inline-flex items-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-100"
                 >
                   Book a Discovery Call
-                </a>
+                </TrackableCTA>
               </div>
             </div>
 
@@ -263,12 +267,14 @@ export default function Home() {
                   ))}
                 </ul>
 
-                <a
+                <TrackableCTA
                   href={track.href}
+                  eventName="service_card_cta_clicked"
+                  eventProperties={{ service: track.title }}
                   className="mt-5 inline-flex rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-100"
                 >
                   {track.cta}
-                </a>
+                </TrackableCTA>
               </article>
             ))}
           </div>
@@ -311,12 +317,14 @@ export default function Home() {
             fixed-scope audits.
           </p>
           <div className="flex flex-wrap gap-3">
-            <a
+            <TrackableCTA
               href="mailto:hello@example.com"
+              eventName="contact_email_clicked"
+              eventProperties={{ source: "home_contact_section" }}
               className="inline-flex items-center rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-orange-600"
             >
               Email for Inquiries
-            </a>
+            </TrackableCTA>
             <a
               href="#services"
               className="inline-flex items-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-100"
