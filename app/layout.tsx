@@ -146,8 +146,8 @@ export default function RootLayout({
                   Contact Us
                 </a>
                 <a
-                  href="/cookie-settings"
-                  className="transition-colors hover:text-slate-950 hover:underline"
+                  href="#"
+                  className="cky-banner-element transition-colors hover:text-slate-950 hover:underline"
                 >
                   Cookie Settings
                 </a>
