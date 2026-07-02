@@ -1,5 +1,6 @@
 "use client";
 
+import Alert from "@mui/material/Alert";
 import { useSearchParams } from "next/navigation";
 
 export default function ContactStatus() {
@@ -8,25 +9,29 @@ export default function ContactStatus() {
 
   if (status === "success") {
     return (
-      <p
-        className="rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-sm font-semibold text-green-800"
+      <Alert
+        severity="success"
+        variant="outlined"
         role="status"
         aria-live="polite"
+        sx={{ mb: 2 }}
       >
         Thanks, your message was sent successfully. We will reach out soon.
-      </p>
+      </Alert>
     );
   }
 
   if (status === "error") {
     return (
-      <p
-        className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-800"
+      <Alert
+        severity="error"
+        variant="outlined"
         role="status"
         aria-live="polite"
+        sx={{ mb: 2 }}
       >
         We could not send your message right now. Please try again in a moment.
-      </p>
+      </Alert>
     );
   }
 
