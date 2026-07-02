@@ -4,7 +4,7 @@ import TrackableCTA from "../components/TrackableCTA";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Contact Web Growth Studio for website privacy, care plans, consulting, and productized service inquiries.",
+    "Contact Web Growth Studio for website privacy, care plans, consulting, and compliance audit inquiries.",
   alternates: {
     canonical: "/contact-us",
   },
