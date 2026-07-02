@@ -1,6 +1,7 @@
 "use client";
 
 import { ThemeProvider } from "@mui/material/styles";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v16-appRouter";
 import type { ReactNode } from "react";
 import theme from "./theme";
 
@@ -9,5 +10,9 @@ type ProvidersProps = {
 };
 
 export default function Providers({ children }: ProvidersProps) {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return (
+    <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    </AppRouterCacheProvider>
+  );
 }
