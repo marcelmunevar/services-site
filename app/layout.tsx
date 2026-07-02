@@ -4,6 +4,7 @@ import { IBM_Plex_Mono, Manrope, Syne } from "next/font/google";
 import LayoutShell from "./LayoutShell";
 import Providers from "./providers";
 import "./globals.css";
+import PostHogProvider from "./components/PostHogProvider";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
 
@@ -90,6 +91,7 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} ${monoFont.variable}`}
     >
       <body>
+        <PostHogProvider />
         <GoogleTagManager gtmId="GTM-KJCXXH7F" />
         <Providers>
           <LayoutShell year={year}>{children}</LayoutShell>
