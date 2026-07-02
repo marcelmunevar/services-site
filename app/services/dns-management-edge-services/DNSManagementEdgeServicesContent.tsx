@@ -12,6 +12,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import { bulletListSx } from "../../components/muiListStyles";
 
 type FAQItem = {
   question: string;
@@ -122,13 +123,7 @@ export default function DNSManagementEdgeServicesContent({
                 sx={{
                   mt: 2,
                   pl: 3,
-                  display: "grid",
-                  gap: 1,
-                  color: "text.secondary",
-                  lineHeight: 1.7,
-                  "& li::marker": {
-                    color: "secondary.main",
-                  },
+                  ...bulletListSx,
                 }}
               >
                 <li>
