@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import TrackableCTA from "../components/TrackableCTA";
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
+import {
+  buildServicesBreadcrumbSchema,
+  getServicesIndexCards,
+} from "../../lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -13,64 +15,10 @@ export const metadata: Metadata = {
   },
 };
 
-const services = [
-  {
-    title: "DNS Management & Edge Services",
-    href: "/services/dns-management-edge-services",
-    description:
-      "Client-owned Cloudflare setup and managed DNS/edge operations including migrations, DNS records, SSL/TLS hardening, CDN and WAF tuning, and ongoing change support.",
-  },
-  {
-    title: "Website Privacy Compliance",
-    href: "/services/website-privacy-compliance",
-    description:
-      "Cookie consent audits, consent implementation, OneTrust setup, privacy policy implementation, and GTM consent fixes.",
-  },
-  {
-    title: "Website Care Plans",
-    href: "/services/website-care-plans",
-    description:
-      "Monthly website support including updates, security monitoring, backups, accessibility checks, and content maintenance.",
-  },
-  {
-    title: "Enterprise Web Consulting",
-    href: "/services/enterprise-web-consulting",
-    description:
-      "Senior consulting for website migrations, landing pages, performance improvements, and accessibility remediation.",
-  },
-  {
-    title: "Website Compliance Audits & Checklists",
-    href: "/services/productized-website-services",
-    description:
-      "Independent compliance audit reports for teams that want to self-remediate. Covers privacy, security, accessibility, cookie inventory, and includes an implementation guide with templates.",
-  },
-  {
-    title: "AI-Generated Static Websites",
-    href: "/services/ai-generated-static-websites",
-    description:
-      "Cost-effective static websites built with AI and Next.js, deployed to Vercel's free tier. Ideal for portfolios, landing pages, and small business sites.",
-  },
-];
+const services = getServicesIndexCards();
 
 export default function ServicesIndexPage() {
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: siteUrl,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Services",
-        item: `${siteUrl}/services`,
-      },
-    ],
-  };
+  const breadcrumbSchema = buildServicesBreadcrumbSchema();
 
   return (
     <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-10 px-5 py-12 sm:px-8 lg:px-10">

@@ -1,182 +1,13 @@
 import TrackableCTA from "./components/TrackableCTA";
+import {
+  buildHomeProfessionalServiceSchema,
+  getHomeServiceTracks,
+} from "../lib/structured-data";
 
 export default function Home() {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "Web Growth Studio",
-    url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
-    description:
-      "Professional web services with 7+ years supporting enterprise compliance implementations across multi-subsidiary organizations.",
-    serviceType: [
-      "DNS Management & Edge Services",
-      "Website Privacy Compliance",
-      "Website Care Plans",
-      "Enterprise Web Consulting",
-      "Website Compliance Audits & Checklists",
-      "AI-Generated Static Websites",
-    ],
-    areaServed: "Worldwide",
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Web Growth Studio Services",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "DNS Management & Edge Services",
-            url: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com"}/services/dns-management-edge-services`,
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Website Privacy Compliance",
-            url: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com"}/services/website-privacy-compliance`,
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Website Care Plans",
-            url: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com"}/services/website-care-plans`,
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Enterprise Web Consulting",
-            url: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com"}/services/enterprise-web-consulting`,
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Website Compliance Audits & Checklists",
-            url: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com"}/services/productized-website-services`,
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "AI-Generated Static Websites",
-            url: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com"}/services/ai-generated-static-websites`,
-          },
-        },
-      ],
-    },
-    knowsAbout: [
-      "Consent implementation",
-      "Cookie consent management",
-      "Google Tag Manager",
-      "Website accessibility",
-      "Website performance",
-      "WordPress maintenance",
-      "Next.js development",
-    ],
-  };
+  const structuredData = buildHomeProfessionalServiceSchema();
 
-  const serviceTracks = [
-    {
-      title: "DNS Management & Edge Services",
-      value: "Client-owned Cloudflare setup and managed DNS operations",
-      points: [
-        "Client-owned Cloudflare account onboarding",
-        "DNS migration planning and record validation",
-        "Nameserver cutover support",
-        "SSL/TLS hardening and redirect strategy",
-        "CDN caching and edge performance tuning",
-        "WAF baseline and bot protection setup",
-        "Ongoing DNS and edge change support",
-      ],
-      cta: "View DNS service",
-      href: "/services/dns-management-edge-services",
-    },
-    {
-      title: "Website Privacy Compliance",
-      value: "Technical implementation and ongoing assurance",
-      points: [
-        "Cookie consent audits",
-        "Consent implementation",
-        "OneTrust/CookiePro setup",
-        "Privacy policy implementation",
-        "Google Tag Manager consent fixes",
-        "Cross-subsidiary rollout support",
-        "Monthly compliance monitoring",
-      ],
-      cta: "View compliance service",
-      href: "/services/website-privacy-compliance",
-    },
-    {
-      title: "Website Care Plans",
-      value: "Monthly support for stable, secure websites",
-      points: [
-        "WordPress updates",
-        "Security monitoring",
-        "Backups",
-        "Accessibility checks",
-        "Cookie scans",
-        "Small content updates",
-      ],
-      cta: "View care plans",
-      href: "/services/website-care-plans",
-    },
-    {
-      title: "Enterprise Web Consulting",
-      value: "Senior delivery for high-impact web initiatives",
-      points: [
-        "Website migrations",
-        "New landing pages",
-        "Performance improvements",
-        "Accessibility remediation",
-        "Governance across multiple brands and teams",
-        "Development support",
-        "CI/CD and platform modernization",
-      ],
-      cta: "View consulting service",
-      href: "/services/enterprise-web-consulting",
-    },
-    {
-      title: "Website Compliance Audits & Checklists",
-      value:
-        "Independent audits and reports for teams that want to self-remediate",
-      points: [
-        "Website compliance audit report (privacy, security, accessibility)",
-        "Detailed findings with remediation priorities",
-        "Cookie and consent inventory report",
-        "Privacy policy and legal checklist",
-        "Accessibility conformance audit",
-        "Implementation guide with templates",
-        "2-week turnaround",
-      ],
-      cta: "View audit packages",
-      href: "/services/productized-website-services",
-    },
-    {
-      title: "AI-Generated Static Websites",
-      value:
-        "Cost-effective static sites built with AI, deployed to Vercel's free tier",
-      points: [
-        "AI-powered content generation",
-        "Next.js static site generation",
-        "Vercel account creation and setup",
-        "Free tier Vercel deployment (included)",
-        "Fully responsive design",
-        "SEO-optimized markup",
-        "Fast CDN delivery",
-        "Custom domain support",
-        "No hosting costs for initial deployment",
-      ],
-      cta: "View AI website service",
-      href: "/services/ai-generated-static-websites",
-    },
-  ];
+  const serviceTracks = getHomeServiceTracks();
 
   return (
     <>
@@ -297,7 +128,7 @@ export default function Home() {
               Services
             </p>
             <h2 className="display-font text-3xl text-slate-950 sm:text-4xl">
-              Six core services I offer
+              {serviceTracks.length} core services I offer
             </h2>
           </div>
 
