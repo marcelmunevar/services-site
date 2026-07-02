@@ -45,15 +45,7 @@ export default function ContactUsContent() {
           right engagement model and next steps.
         </Typography>
 
-        <Card
-          variant="outlined"
-          sx={{
-            borderColor: "rgba(148, 163, 184, 0.35)",
-            borderRadius: "1.5rem",
-            bgcolor: "rgba(255, 255, 255, 0.9)",
-            boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
-          }}
-        >
+        <Card>
           <CardContent sx={{ p: 3 }}>
             <Typography variant="h2" sx={{ fontSize: "1.25rem", mb: 1 }}>
               Email
@@ -72,15 +64,7 @@ export default function ContactUsContent() {
           </CardContent>
         </Card>
 
-        <Card
-          variant="outlined"
-          sx={{
-            borderColor: "rgba(148, 163, 184, 0.35)",
-            borderRadius: "1.5rem",
-            bgcolor: "rgba(255, 255, 255, 0.9)",
-            boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
-          }}
-        >
+        <Card>
           <CardContent sx={{ p: 3 }}>
             <Typography variant="h2" sx={{ fontSize: "1.25rem", mb: 1 }}>
               Send a Message
@@ -154,12 +138,7 @@ export default function ContactUsContent() {
                 />
 
                 <Box>
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    color="primary"
-                    sx={{ borderRadius: "9999px", px: 3, py: 1 }}
-                  >
+                  <Button type="submit" variant="contained" color="primary">
                     Send Message
                   </Button>
                 </Box>

@@ -58,26 +58,9 @@ export default function AIGeneratedStaticWebsitesContent({
           </Typography>
         </Breadcrumbs>
 
-        <Card
-          variant="outlined"
-          sx={{
-            borderColor: "rgba(255,255,255,0.7)",
-            borderRadius: "1.8rem",
-            bgcolor: "rgba(255,255,255,0.85)",
-            boxShadow: "0 20px 70px rgba(15, 23, 42, 0.08)",
-            backdropFilter: "blur(8px)",
-          }}
-        >
+        <Card>
           <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
-            <Typography
-              sx={{
-                textTransform: "uppercase",
-                fontSize: "0.75rem",
-                fontWeight: 700,
-                letterSpacing: "0.16em",
-                color: "text.secondary",
-              }}
-            >
+            <Typography variant="overline" color="text.secondary">
               AI-Generated Static Websites
             </Typography>
             <Typography
@@ -109,15 +92,7 @@ export default function AIGeneratedStaticWebsitesContent({
             gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
           }}
         >
-          <Card
-            variant="outlined"
-            sx={{
-              borderColor: "rgba(148, 163, 184, 0.35)",
-              borderRadius: "1.5rem",
-              bgcolor: "rgba(255,255,255,0.9)",
-              boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
-            }}
-          >
+          <Card>
             <CardContent sx={{ p: 3 }}>
               <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
                 What you get
@@ -136,15 +111,7 @@ export default function AIGeneratedStaticWebsitesContent({
             </CardContent>
           </Card>
 
-          <Card
-            variant="outlined"
-            sx={{
-              borderColor: "rgba(148, 163, 184, 0.35)",
-              borderRadius: "1.5rem",
-              bgcolor: "rgba(255,255,255,0.9)",
-              boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
-            }}
-          >
+          <Card>
             <CardContent sx={{ p: 3 }}>
               <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
                 Best for
@@ -165,7 +132,7 @@ export default function AIGeneratedStaticWebsitesContent({
                 href="/#contact"
                 variant="contained"
                 onClick={() => trackConsultation()}
-                sx={{ mt: 3, borderRadius: "9999px", px: 2.5 }}
+                sx={{ mt: 3 }}
               >
                 Book a discovery call
               </Button>
@@ -173,25 +140,9 @@ export default function AIGeneratedStaticWebsitesContent({
           </Card>
         </Box>
 
-        <Card
-          variant="outlined"
-          sx={{
-            borderColor: "rgba(148, 163, 184, 0.35)",
-            borderRadius: "1.8rem",
-            bgcolor: "rgba(255,255,255,0.9)",
-            boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
-          }}
-        >
+        <Card>
           <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
-            <Typography
-              sx={{
-                textTransform: "uppercase",
-                fontSize: "0.75rem",
-                fontWeight: 700,
-                letterSpacing: "0.16em",
-                color: "text.secondary",
-              }}
-            >
+            <Typography variant="overline" color="text.secondary">
               Process
             </Typography>
             <Typography variant="h2" sx={{ mt: 1.5, fontSize: "2rem" }}>
@@ -212,17 +163,9 @@ export default function AIGeneratedStaticWebsitesContent({
                 gridTemplateColumns: { xs: "1fr", md: "1fr 1fr 1fr" },
               }}
             >
-              <Card variant="outlined" sx={{ borderRadius: "1rem" }}>
+              <Card>
                 <CardContent>
-                  <Typography
-                    sx={{
-                      fontSize: "0.8rem",
-                      fontWeight: 700,
-                      color: "#c2410c",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.08em",
-                    }}
-                  >
+                  <Typography variant="overline" color="text.secondary">
                     Step 1
                   </Typography>
                   <Typography sx={{ mt: 1, fontSize: "1rem", fontWeight: 700 }}>
@@ -238,17 +181,9 @@ export default function AIGeneratedStaticWebsitesContent({
                 </CardContent>
               </Card>
 
-              <Card variant="outlined" sx={{ borderRadius: "1rem" }}>
+              <Card>
                 <CardContent>
-                  <Typography
-                    sx={{
-                      fontSize: "0.8rem",
-                      fontWeight: 700,
-                      color: "#c2410c",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.08em",
-                    }}
-                  >
+                  <Typography variant="overline" color="text.secondary">
                     Step 2
                   </Typography>
                   <Typography sx={{ mt: 1, fontSize: "1rem", fontWeight: 700 }}>
@@ -264,17 +199,9 @@ export default function AIGeneratedStaticWebsitesContent({
                 </CardContent>
               </Card>
 
-              <Card variant="outlined" sx={{ borderRadius: "1rem" }}>
+              <Card>
                 <CardContent>
-                  <Typography
-                    sx={{
-                      fontSize: "0.8rem",
-                      fontWeight: 700,
-                      color: "#c2410c",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.08em",
-                    }}
-                  >
+                  <Typography variant="overline" color="text.secondary">
                     Step 3
                   </Typography>
                   <Typography sx={{ mt: 1, fontSize: "1rem", fontWeight: 700 }}>
@@ -293,25 +220,9 @@ export default function AIGeneratedStaticWebsitesContent({
           </CardContent>
         </Card>
 
-        <Card
-          variant="outlined"
-          sx={{
-            borderColor: "rgba(148, 163, 184, 0.35)",
-            borderRadius: "1.8rem",
-            bgcolor: "rgba(255,255,255,0.9)",
-            boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
-          }}
-        >
+        <Card>
           <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
-            <Typography
-              sx={{
-                textTransform: "uppercase",
-                fontSize: "0.75rem",
-                fontWeight: 700,
-                letterSpacing: "0.16em",
-                color: "text.secondary",
-              }}
-            >
+            <Typography variant="overline" color="text.secondary">
               Hosting and Costs
             </Typography>
             <Typography variant="h2" sx={{ mt: 1.5, fontSize: "2rem" }}>
@@ -367,36 +278,21 @@ export default function AIGeneratedStaticWebsitesContent({
 
         <ServiceFaqSection faqs={faqs} eyebrow="FAQ" title="Common questions" />
 
-        <Card
-          variant="outlined"
-          sx={{
-            borderColor: "rgba(15, 23, 42, 0.3)",
-            borderRadius: "1.8rem",
-            bgcolor: "#0f172a",
-            color: "#e2e8f0",
-            boxShadow: "0 16px 55px rgba(2, 8, 20, 0.2)",
-          }}
-        >
+        <Card>
           <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
-            <Typography
-              sx={{
-                textTransform: "uppercase",
-                fontSize: "0.75rem",
-                fontWeight: 700,
-                letterSpacing: "0.16em",
-                color: "#cbd5e1",
-              }}
-            >
+            <Typography variant="overline" color="text.secondary">
               Get started
             </Typography>
-            <Typography
-              variant="h2"
-              sx={{ mt: 1.5, fontSize: "2rem", color: "#f8fafc" }}
-            >
+            <Typography variant="h2" sx={{ mt: 1.5, fontSize: "2rem" }}>
               Ready to launch your site?
             </Typography>
             <Typography
-              sx={{ mt: 1.5, maxWidth: 820, color: "#cbd5e1", lineHeight: 1.7 }}
+              sx={{
+                mt: 1.5,
+                maxWidth: 820,
+                color: "text.secondary",
+                lineHeight: 1.7,
+              }}
             >
               Book a short discovery call to share your goals. I will confirm
               whether a static site is the right fit, outline the timeline, and
@@ -408,26 +304,10 @@ export default function AIGeneratedStaticWebsitesContent({
                 href="/#contact"
                 variant="contained"
                 onClick={() => trackConsultation("bottom_cta")}
-                sx={{
-                  borderRadius: "9999px",
-                  px: 3,
-                  bgcolor: "#f97316",
-                  "&:hover": { bgcolor: "#ea580c" },
-                }}
               >
                 Book a discovery call
               </Button>
-              <Button
-                component={NextLink}
-                href="/services"
-                variant="outlined"
-                sx={{
-                  borderRadius: "9999px",
-                  px: 3,
-                  color: "#cbd5e1",
-                  borderColor: "#475569",
-                }}
-              >
+              <Button component={NextLink} href="/services" variant="outlined">
                 View all services
               </Button>
             </Box>

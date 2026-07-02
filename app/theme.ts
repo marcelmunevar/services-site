@@ -10,7 +10,7 @@ const theme = createTheme({
       main: "#0d9488",
     },
     background: {
-      default: "#f4f1e8",
+      default: "#fafafa",
       paper: "#ffffff",
     },
     text: {
@@ -21,16 +21,18 @@ const theme = createTheme({
   typography: {
     fontFamily: 'var(--font-body), "Segoe UI", sans-serif',
     h1: {
-      fontFamily: 'var(--font-display), "Trebuchet MS", sans-serif',
-      letterSpacing: "-0.03em",
+      fontWeight: 700,
     },
     h2: {
-      fontFamily: 'var(--font-display), "Trebuchet MS", sans-serif',
-      letterSpacing: "-0.03em",
+      fontWeight: 700,
     },
     h3: {
-      fontFamily: 'var(--font-display), "Trebuchet MS", sans-serif',
-      letterSpacing: "-0.03em",
+      fontWeight: 700,
+    },
+    overline: {
+      fontWeight: 700,
+      letterSpacing: "0.08em",
+      color: "#334155",
     },
     button: {
       textTransform: "none",
@@ -38,7 +40,59 @@ const theme = createTheme({
     },
   },
   shape: {
-    borderRadius: 14,
+    borderRadius: 8,
+  },
+  components: {
+    MuiAppBar: {
+      defaultProps: {
+        color: "default",
+        elevation: 0,
+      },
+      styleOverrides: {
+        root: {
+          backgroundImage: "none",
+          borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
+        },
+      },
+    },
+    MuiCard: {
+      defaultProps: {
+        variant: "outlined",
+      },
+      styleOverrides: {
+        root: {
+          backgroundImage: "none",
+          boxShadow: "none",
+        },
+      },
+    },
+    MuiCardContent: {
+      styleOverrides: {
+        root: {
+          padding: 24,
+          "&:last-child": {
+            paddingBottom: 24,
+          },
+        },
+      },
+    },
+    MuiButton: {
+      defaultProps: {
+        disableElevation: true,
+        size: "large",
+      },
+    },
+    MuiAccordion: {
+      defaultProps: {
+        elevation: 0,
+      },
+      styleOverrides: {
+        root: {
+          backgroundImage: "none",
+          boxShadow: "none",
+        },
+      },
+    },
   },
 });
 

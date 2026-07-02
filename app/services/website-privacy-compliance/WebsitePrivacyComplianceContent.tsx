@@ -60,26 +60,9 @@ export default function WebsitePrivacyComplianceContent({
           </Typography>
         </Breadcrumbs>
 
-        <Card
-          variant="outlined"
-          sx={{
-            borderColor: "rgba(255,255,255,0.7)",
-            borderRadius: "1.8rem",
-            bgcolor: "rgba(255,255,255,0.85)",
-            boxShadow: "0 20px 70px rgba(15, 23, 42, 0.08)",
-            backdropFilter: "blur(8px)",
-          }}
-        >
+        <Card>
           <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
-            <Typography
-              sx={{
-                textTransform: "uppercase",
-                fontSize: "0.75rem",
-                fontWeight: 700,
-                letterSpacing: "0.16em",
-                color: "text.secondary",
-              }}
-            >
+            <Typography variant="overline" color="text.secondary">
               Website Privacy Compliance
             </Typography>
             <Typography
@@ -110,15 +93,7 @@ export default function WebsitePrivacyComplianceContent({
             gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
           }}
         >
-          <Card
-            variant="outlined"
-            sx={{
-              borderColor: "rgba(148, 163, 184, 0.35)",
-              borderRadius: "1.5rem",
-              bgcolor: "rgba(255,255,255,0.9)",
-              boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
-            }}
-          >
+          <Card>
             <CardContent sx={{ p: 3 }}>
               <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
                 Included services
@@ -141,15 +116,7 @@ export default function WebsitePrivacyComplianceContent({
             </CardContent>
           </Card>
 
-          <Card
-            variant="outlined"
-            sx={{
-              borderColor: "rgba(148, 163, 184, 0.35)",
-              borderRadius: "1.5rem",
-              bgcolor: "rgba(255,255,255,0.9)",
-              boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
-            }}
-          >
+          <Card>
             <CardContent sx={{ p: 3 }}>
               <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
                 Ideal for
@@ -179,7 +146,7 @@ export default function WebsitePrivacyComplianceContent({
                 href="/#contact"
                 variant="contained"
                 onClick={handleConsultationClick}
-                sx={{ mt: 3, borderRadius: "9999px", px: 2.5 }}
+                sx={{ mt: 3 }}
               >
                 Request a privacy compliance consultation
               </Button>
@@ -187,25 +154,9 @@ export default function WebsitePrivacyComplianceContent({
           </Card>
         </Box>
 
-        <Card
-          variant="outlined"
-          sx={{
-            borderColor: "rgba(148, 163, 184, 0.35)",
-            borderRadius: "1.8rem",
-            bgcolor: "rgba(255,255,255,0.9)",
-            boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
-          }}
-        >
+        <Card>
           <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
-            <Typography
-              sx={{
-                textTransform: "uppercase",
-                fontSize: "0.75rem",
-                fontWeight: 700,
-                letterSpacing: "0.16em",
-                color: "text.secondary",
-              }}
-            >
+            <Typography variant="overline" color="text.secondary">
               Packages
             </Typography>
             <Typography variant="h2" sx={{ mt: 1.5, fontSize: "2rem" }}>
@@ -226,7 +177,7 @@ export default function WebsitePrivacyComplianceContent({
                 gridTemplateColumns: { xs: "1fr", md: "1fr 1fr 1fr" },
               }}
             >
-              <Card variant="outlined" sx={{ borderRadius: "1rem" }}>
+              <Card>
                 <CardContent>
                   <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
                     Audit Sprint
@@ -240,7 +191,7 @@ export default function WebsitePrivacyComplianceContent({
                 </CardContent>
               </Card>
 
-              <Card variant="outlined" sx={{ borderRadius: "1rem" }}>
+              <Card>
                 <CardContent>
                   <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
                     Implementation Project
@@ -254,7 +205,7 @@ export default function WebsitePrivacyComplianceContent({
                 </CardContent>
               </Card>
 
-              <Card variant="outlined" sx={{ borderRadius: "1rem" }}>
+              <Card>
                 <CardContent>
                   <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
                     Monthly Monitoring

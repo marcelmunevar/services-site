@@ -7,6 +7,7 @@ import {
   Button,
   Card,
   CardContent,
+  Chip,
   Container,
   Link,
   Typography,
@@ -40,46 +41,9 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
       sx={{ flex: 1, py: { xs: 6, sm: 8 } }}
     >
       <Box sx={{ display: "grid", gap: 6 }}>
-        <Card
-          sx={{
-            position: "relative",
-            overflow: "hidden",
-            borderRadius: "2rem",
-            border: "1px solid rgba(255,255,255,0.65)",
-            bgcolor: "rgba(255,255,255,0.8)",
-            boxShadow: "0 26px 90px rgba(13,26,38,0.18)",
-            backdropFilter: "blur(16px)",
-          }}
-        >
-          <Box
-            sx={{
-              position: "absolute",
-              right: -64,
-              top: -64,
-              width: 176,
-              height: 176,
-              borderRadius: "50%",
-              background:
-                "radial-gradient(circle, rgba(255,95,45,0.45), rgba(255,95,45,0))",
-            }}
-          />
-          <Box
-            sx={{
-              position: "absolute",
-              left: -48,
-              bottom: -80,
-              width: 208,
-              height: 208,
-              borderRadius: "50%",
-              background:
-                "radial-gradient(circle, rgba(5,141,110,0.35), rgba(5,141,110,0))",
-            }}
-          />
-
+        <Card>
           <CardContent
             sx={{
-              position: "relative",
-              zIndex: 1,
               p: { xs: 3, sm: 5 },
               display: "grid",
               gap: 5,
@@ -88,22 +52,7 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
             }}
           >
             <Box sx={{ display: "grid", gap: 3 }}>
-              <Typography
-                sx={{
-                  display: "inline-block",
-                  width: "fit-content",
-                  borderRadius: "9999px",
-                  border: "1px solid rgba(148,163,184,0.7)",
-                  bgcolor: "rgba(255,255,255,0.7)",
-                  px: 2,
-                  py: 0.5,
-                  fontSize: "0.75rem",
-                  fontWeight: 700,
-                  letterSpacing: "0.2em",
-                  color: "#334155",
-                  textTransform: "uppercase",
-                }}
-              >
+              <Typography variant="overline" color="text.secondary">
                 Professional Web Services
               </Typography>
 
@@ -132,26 +81,11 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
                 clear implementation standards.
               </Typography>
 
-              <Typography
-                sx={{
-                  display: "inline-flex",
-                  width: "fit-content",
-                  alignItems: "center",
-                  borderRadius: "9999px",
-                  border: "1px solid rgba(148,163,184,0.8)",
-                  bgcolor: "rgba(255,255,255,0.8)",
-                  px: 2,
-                  py: 1,
-                  fontSize: "0.75rem",
-                  fontWeight: 700,
-                  letterSpacing: "0.08em",
-                  color: "#334155",
-                  textTransform: "uppercase",
-                }}
-              >
-                7+ years supporting enterprise web programs across
-                multi-subsidiary organizations
-              </Typography>
+              <Chip
+                label="7+ years supporting enterprise web programs across multi-subsidiary organizations"
+                variant="outlined"
+                sx={{ width: "fit-content" }}
+              />
 
               <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1.5 }}>
                 <Button
@@ -159,7 +93,6 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
                   href="#services"
                   variant="contained"
                   onClick={() => trackEvent("explore_services_clicked")}
-                  sx={{ borderRadius: "9999px", px: 3, py: 1.2 }}
                 >
                   Explore Services
                 </Button>
@@ -168,31 +101,15 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
                   href="#contact"
                   variant="outlined"
                   onClick={() => trackEvent("book_discovery_call_clicked")}
-                  sx={{ borderRadius: "9999px", px: 3, py: 1.2 }}
                 >
                   Book a Discovery Call
                 </Button>
               </Box>
             </Box>
 
-            <Card
-              variant="outlined"
-              sx={{
-                borderColor: "rgba(148,163,184,0.8)",
-                bgcolor: "rgba(248,250,252,0.9)",
-                borderRadius: "1.5rem",
-              }}
-            >
+            <Card>
               <CardContent sx={{ p: 3 }}>
-                <Typography
-                  sx={{
-                    fontSize: "0.75rem",
-                    fontWeight: 700,
-                    letterSpacing: "0.14em",
-                    color: "text.secondary",
-                    textTransform: "uppercase",
-                  }}
-                >
+                <Typography variant="overline" color="text.secondary">
                   Why clients work with me
                 </Typography>
 
@@ -211,11 +128,7 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
                       body: "Consistent progress updates, realistic timelines, and predictable delivery.",
                     },
                   ].map((item) => (
-                    <Card
-                      key={item.title}
-                      variant="outlined"
-                      sx={{ borderRadius: "1rem" }}
-                    >
+                    <Card key={item.title}>
                       <CardContent sx={{ p: 2 }}>
                         <Typography
                           sx={{ fontSize: "0.9rem", fontWeight: 700 }}
@@ -240,14 +153,7 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
           </CardContent>
         </Card>
 
-        <Card
-          variant="outlined"
-          sx={{
-            borderRadius: "1.8rem",
-            bgcolor: "rgba(255,255,255,0.9)",
-            boxShadow: "0 16px 55px rgba(2,8,20,0.08)",
-          }}
-        >
+        <Card>
           <CardContent
             sx={{
               p: { xs: 3, sm: 5 },
@@ -257,15 +163,7 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
             }}
           >
             <Box>
-              <Typography
-                sx={{
-                  fontSize: "0.75rem",
-                  fontWeight: 700,
-                  letterSpacing: "0.18em",
-                  color: "text.secondary",
-                  textTransform: "uppercase",
-                }}
-              >
+              <Typography variant="overline" color="text.secondary">
                 Enterprise Experience
               </Typography>
               <Typography
@@ -296,15 +194,7 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
 
         <Box id="services" sx={{ display: "grid", gap: 2.5 }}>
           <Box sx={{ display: "grid", gap: 1 }}>
-            <Typography
-              sx={{
-                fontSize: "0.75rem",
-                fontWeight: 700,
-                letterSpacing: "0.18em",
-                color: "text.secondary",
-                textTransform: "uppercase",
-              }}
-            >
+            <Typography variant="overline" color="text.secondary">
               Services
             </Typography>
             <Typography
@@ -323,25 +213,9 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
             }}
           >
             {serviceTracks.map((track) => (
-              <Card
-                key={track.title}
-                variant="outlined"
-                sx={{
-                  borderRadius: "1.5rem",
-                  bgcolor: "rgba(255,255,255,0.85)",
-                  boxShadow: "0 20px 70px rgba(15,23,42,0.09)",
-                }}
-              >
+              <Card key={track.title}>
                 <CardContent sx={{ p: 3 }}>
-                  <Typography
-                    sx={{
-                      fontSize: "0.75rem",
-                      fontWeight: 700,
-                      letterSpacing: "0.15em",
-                      color: "#c2410c",
-                      textTransform: "uppercase",
-                    }}
-                  >
+                  <Typography variant="overline" color="text.secondary">
                     {track.value}
                   </Typography>
                   <Typography variant="h3" sx={{ mt: 1, fontSize: "1.5rem" }}>
@@ -361,7 +235,7 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
                         service: track.title,
                       })
                     }
-                    sx={{ mt: 2.5, borderRadius: "9999px", px: 2.5 }}
+                    sx={{ mt: 2.5 }}
                   >
                     {track.cta}
                   </Button>
@@ -371,15 +245,7 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
           </Box>
         </Box>
 
-        <Card
-          variant="outlined"
-          sx={{
-            borderRadius: "1.8rem",
-            bgcolor: "#0f172a",
-            color: "#f1f5f9",
-            boxShadow: "0 16px 55px rgba(2,8,20,0.2)",
-          }}
-        >
+        <Card>
           <CardContent
             sx={{
               p: { xs: 3, sm: 5 },
@@ -389,56 +255,29 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
             }}
           >
             <Box>
-              <Typography
-                sx={{
-                  fontSize: "0.75rem",
-                  fontWeight: 700,
-                  letterSpacing: "0.16em",
-                  color: "#cbd5e1",
-                  textTransform: "uppercase",
-                }}
-              >
+              <Typography variant="overline" color="text.secondary">
                 Approach
               </Typography>
-              <Typography
-                variant="h3"
-                sx={{ mt: 1.5, fontSize: "2rem", color: "#f8fafc" }}
-              >
+              <Typography variant="h3" sx={{ mt: 1.5, fontSize: "2rem" }}>
                 Technical execution with business clarity.
               </Typography>
             </Box>
-            <Typography sx={{ color: "#cbd5e1", lineHeight: 1.7 }}>
+            <Typography sx={{ color: "text.secondary", lineHeight: 1.7 }}>
               I focus on implementation: consent tooling, GTM fixes,
               accessibility execution, and reliable delivery systems. When legal
               interpretation is required, I coordinate with legal teams while
               staying focused on technical outcomes.
             </Typography>
-            <Typography sx={{ color: "#cbd5e1", lineHeight: 1.7 }}>
+            <Typography sx={{ color: "text.secondary", lineHeight: 1.7 }}>
               Every engagement is built around clear deliverables, timelines,
               and reporting. Clients get confidence, not just code.
             </Typography>
           </CardContent>
         </Card>
 
-        <Card
-          id="contact"
-          variant="outlined"
-          sx={{
-            borderRadius: "1.7rem",
-            bgcolor: "rgba(255,255,255,0.9)",
-            boxShadow: "0 16px 55px rgba(2,8,20,0.08)",
-          }}
-        >
+        <Card id="contact">
           <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
-            <Typography
-              sx={{
-                fontSize: "0.75rem",
-                fontWeight: 700,
-                letterSpacing: "0.18em",
-                color: "text.secondary",
-                textTransform: "uppercase",
-              }}
-            >
+            <Typography variant="overline" color="text.secondary">
               Next step
             </Typography>
             <Typography
@@ -464,21 +303,10 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
                     source: "home_contact_section",
                   })
                 }
-                sx={{
-                  borderRadius: "9999px",
-                  px: 3,
-                  bgcolor: "#f97316",
-                  "&:hover": { bgcolor: "#ea580c" },
-                }}
               >
                 Email for Inquiries
               </Button>
-              <Button
-                component={NextLink}
-                href="#services"
-                variant="outlined"
-                sx={{ borderRadius: "9999px", px: 3 }}
-              >
+              <Button component={NextLink} href="#services" variant="outlined">
                 Review Services Again
               </Button>
             </Box>

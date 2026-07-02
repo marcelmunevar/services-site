@@ -57,26 +57,9 @@ export default function EnterpriseWebConsultingContent({
           </Typography>
         </Breadcrumbs>
 
-        <Card
-          variant="outlined"
-          sx={{
-            borderColor: "rgba(255,255,255,0.7)",
-            borderRadius: "1.8rem",
-            bgcolor: "rgba(255,255,255,0.85)",
-            boxShadow: "0 20px 70px rgba(15, 23, 42, 0.08)",
-            backdropFilter: "blur(8px)",
-          }}
-        >
+        <Card>
           <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
-            <Typography
-              sx={{
-                textTransform: "uppercase",
-                fontSize: "0.75rem",
-                fontWeight: 700,
-                letterSpacing: "0.16em",
-                color: "text.secondary",
-              }}
-            >
+            <Typography variant="overline" color="text.secondary">
               Enterprise Web Consulting
             </Typography>
             <Typography
@@ -107,15 +90,7 @@ export default function EnterpriseWebConsultingContent({
             gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
           }}
         >
-          <Card
-            variant="outlined"
-            sx={{
-              borderColor: "rgba(148, 163, 184, 0.35)",
-              borderRadius: "1.5rem",
-              bgcolor: "rgba(255,255,255,0.9)",
-              boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
-            }}
-          >
+          <Card>
             <CardContent sx={{ p: 3 }}>
               <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
                 Consulting areas
@@ -131,15 +106,7 @@ export default function EnterpriseWebConsultingContent({
             </CardContent>
           </Card>
 
-          <Card
-            variant="outlined"
-            sx={{
-              borderColor: "rgba(148, 163, 184, 0.35)",
-              borderRadius: "1.5rem",
-              bgcolor: "rgba(255,255,255,0.9)",
-              boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
-            }}
-          >
+          <Card>
             <CardContent sx={{ p: 3 }}>
               <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
                 Engagement options
@@ -157,7 +124,7 @@ export default function EnterpriseWebConsultingContent({
                 href="/#contact"
                 variant="contained"
                 onClick={handleConsultationClick}
-                sx={{ mt: 3, borderRadius: "9999px", px: 2.5 }}
+                sx={{ mt: 3 }}
               >
                 Discuss enterprise consulting support
               </Button>
@@ -165,25 +132,9 @@ export default function EnterpriseWebConsultingContent({
           </Card>
         </Box>
 
-        <Card
-          variant="outlined"
-          sx={{
-            borderColor: "rgba(148, 163, 184, 0.35)",
-            borderRadius: "1.8rem",
-            bgcolor: "rgba(255,255,255,0.9)",
-            boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
-          }}
-        >
+        <Card>
           <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
-            <Typography
-              sx={{
-                textTransform: "uppercase",
-                fontSize: "0.75rem",
-                fontWeight: 700,
-                letterSpacing: "0.16em",
-                color: "text.secondary",
-              }}
-            >
+            <Typography variant="overline" color="text.secondary">
               Engagement Models
             </Typography>
             <Typography variant="h2" sx={{ mt: 1.5, fontSize: "2rem" }}>
@@ -204,7 +155,7 @@ export default function EnterpriseWebConsultingContent({
                 gridTemplateColumns: { xs: "1fr", md: "1fr 1fr 1fr" },
               }}
             >
-              <Card variant="outlined" sx={{ borderRadius: "1rem" }}>
+              <Card>
                 <CardContent>
                   <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
                     Advisory Sprint
@@ -218,7 +169,7 @@ export default function EnterpriseWebConsultingContent({
                 </CardContent>
               </Card>
 
-              <Card variant="outlined" sx={{ borderRadius: "1rem" }}>
+              <Card>
                 <CardContent>
                   <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
                     Project Consulting
@@ -232,7 +183,7 @@ export default function EnterpriseWebConsultingContent({
                 </CardContent>
               </Card>
 
-              <Card variant="outlined" sx={{ borderRadius: "1rem" }}>
+              <Card>
                 <CardContent>
                   <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
                     Embedded Support

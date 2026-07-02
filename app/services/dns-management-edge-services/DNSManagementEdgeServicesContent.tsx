@@ -54,26 +54,9 @@ export default function DNSManagementEdgeServicesContent({
           </Typography>
         </Breadcrumbs>
 
-        <Card
-          variant="outlined"
-          sx={{
-            borderColor: "rgba(255,255,255,0.7)",
-            borderRadius: "1.8rem",
-            bgcolor: "rgba(255,255,255,0.85)",
-            boxShadow: "0 20px 70px rgba(15, 23, 42, 0.08)",
-            backdropFilter: "blur(8px)",
-          }}
-        >
+        <Card>
           <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
-            <Typography
-              sx={{
-                textTransform: "uppercase",
-                fontSize: "0.75rem",
-                fontWeight: 700,
-                letterSpacing: "0.16em",
-                color: "text.secondary",
-              }}
-            >
+            <Typography variant="overline" color="text.secondary">
               DNS and Edge Operations
             </Typography>
             <Typography
@@ -106,15 +89,7 @@ export default function DNSManagementEdgeServicesContent({
             gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
           }}
         >
-          <Card
-            variant="outlined"
-            sx={{
-              borderColor: "rgba(148, 163, 184, 0.35)",
-              borderRadius: "1.5rem",
-              bgcolor: "rgba(255,255,255,0.9)",
-              boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
-            }}
-          >
+          <Card>
             <CardContent sx={{ p: 3 }}>
               <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
                 Included deliverables
@@ -140,15 +115,7 @@ export default function DNSManagementEdgeServicesContent({
             </CardContent>
           </Card>
 
-          <Card
-            variant="outlined"
-            sx={{
-              borderColor: "rgba(148, 163, 184, 0.35)",
-              borderRadius: "1.5rem",
-              bgcolor: "rgba(255,255,255,0.9)",
-              boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
-            }}
-          >
+          <Card>
             <CardContent sx={{ p: 3 }}>
               <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
                 Engagement model
@@ -170,7 +137,7 @@ export default function DNSManagementEdgeServicesContent({
                 component={NextLink}
                 href="/contact-us"
                 variant="contained"
-                sx={{ mt: 2.5, borderRadius: "9999px", px: 2.5 }}
+                sx={{ mt: 2.5 }}
               >
                 Request DNS and edge support
               </Button>

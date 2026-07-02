@@ -19,24 +19,13 @@ type LayoutShellProps = {
 
 export default function LayoutShell({ children, year }: LayoutShellProps) {
   return (
-    <Box
-      className="page-wrap"
-      sx={{
-        minHeight: "100dvh",
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
+    <Box sx={{ minHeight: "100dvh", display: "flex", flexDirection: "column" }}>
       <AppBar
         position="sticky"
-        color="transparent"
-        elevation={0}
         sx={{
           top: 0,
           zIndex: (theme) => theme.zIndex.appBar,
-          borderBottom: "1px solid rgba(148, 163, 184, 0.35)",
-          bgcolor: "rgba(255,255,255,0.8)",
-          backdropFilter: "blur(16px)",
+          bgcolor: "background.paper",
         }}
       >
         <Toolbar disableGutters sx={{ minHeight: "unset" }}>
@@ -57,9 +46,8 @@ export default function LayoutShell({ children, year }: LayoutShellProps) {
               underline="none"
               color="text.primary"
               sx={{
-                fontFamily: "var(--font-display), 'Trebuchet MS', sans-serif",
-                letterSpacing: "-0.03em",
                 fontSize: { xs: "1.25rem", sm: "1.5rem" },
+                fontWeight: 700,
                 lineHeight: 1.1,
               }}
             >
@@ -77,13 +65,7 @@ export default function LayoutShell({ children, year }: LayoutShellProps) {
                 component={NextLink}
                 href="/"
                 color="inherit"
-                sx={{
-                  borderRadius: "9999px",
-                  px: { xs: 1.5, sm: 2 },
-                  py: 0.75,
-                  fontSize: "0.86rem",
-                  fontWeight: 700,
-                }}
+                sx={{ fontSize: "0.9rem" }}
               >
                 Home
               </Button>
@@ -91,13 +73,7 @@ export default function LayoutShell({ children, year }: LayoutShellProps) {
                 component={NextLink}
                 href="/services"
                 color="inherit"
-                sx={{
-                  borderRadius: "9999px",
-                  px: { xs: 1.5, sm: 2 },
-                  py: 0.75,
-                  fontSize: "0.86rem",
-                  fontWeight: 700,
-                }}
+                sx={{ fontSize: "0.9rem" }}
               >
                 Services
               </Button>
@@ -105,13 +81,7 @@ export default function LayoutShell({ children, year }: LayoutShellProps) {
                 component={NextLink}
                 href="/contact-us"
                 variant="contained"
-                sx={{
-                  borderRadius: "9999px",
-                  px: { xs: 1.75, sm: 2.25 },
-                  py: 0.8,
-                  fontSize: "0.86rem",
-                  fontWeight: 700,
-                }}
+                sx={{ fontSize: "0.9rem" }}
               >
                 Contact
               </Button>
@@ -126,9 +96,9 @@ export default function LayoutShell({ children, year }: LayoutShellProps) {
         component="footer"
         sx={{
           mt: 7,
-          borderTop: "1px solid rgba(148, 163, 184, 0.4)",
-          bgcolor: "rgba(255,255,255,0.85)",
-          backdropFilter: "blur(4px)",
+          borderTop: 1,
+          borderColor: "divider",
+          bgcolor: "background.paper",
           py: 4,
         }}
       >
@@ -174,7 +144,7 @@ export default function LayoutShell({ children, year }: LayoutShellProps) {
                 className="cky-banner-element"
                 underline="hover"
                 color="text.secondary"
-                sx={{ fontWeight: 600 }}
+                sx={{ fontWeight: 500 }}
               >
                 Cookie Settings
               </MuiLink>
