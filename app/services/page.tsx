@@ -7,7 +7,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Professional website services for privacy compliance, website care plans, enterprise consulting, and productized audits.",
+    "Professional website services for privacy compliance, website care plans, enterprise consulting, and compliance audits.",
   alternates: {
     canonical: "/services",
   },
@@ -33,10 +33,10 @@ const services = [
       "Senior consulting for website migrations, landing pages, performance improvements, and accessibility remediation.",
   },
   {
-    title: "Productized Website Services",
+    title: "Website Compliance Audits & Checklists",
     href: "/services/productized-website-services",
     description:
-      "Fixed-scope compliance audits, accessibility reports, cookie inventory reports, and implementation guides.",
+      "Independent compliance audit reports for teams that want to self-remediate. Covers privacy, security, accessibility, cookie inventory, and includes an implementation guide with templates.",
   },
   {
     title: "AI-Generated Static Websites",
