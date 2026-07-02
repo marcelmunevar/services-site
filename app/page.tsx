@@ -13,6 +13,7 @@ export default function Home() {
       "Website Care Plans",
       "Enterprise Web Consulting",
       "Productized Website Services",
+      "AI-Generated Static Websites",
     ],
     areaServed: "Worldwide",
     hasOfferCatalog: {
@@ -49,6 +50,14 @@ export default function Home() {
             "@type": "Service",
             name: "Productized Website Services",
             url: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com"}/services/productized-website-services`,
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "AI-Generated Static Websites",
+            url: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com"}/services/ai-generated-static-websites`,
           },
         },
       ],
@@ -122,6 +131,23 @@ export default function Home() {
       ],
       cta: "View productized offers",
       href: "/services/productized-website-services",
+    },
+    {
+      title: "AI-Generated Static Websites",
+      value: "Cost-effective static sites built with AI, deployed to Vercel's free tier",
+      points: [
+        "AI-powered content generation",
+        "Next.js static site generation",
+        "Vercel account creation and setup",
+        "Free tier Vercel deployment (included)",
+        "Fully responsive design",
+        "SEO-optimized markup",
+        "Fast CDN delivery",
+        "Custom domain support",
+        "No hosting costs for initial deployment",
+      ],
+      cta: "View AI website service",
+      href: "/services/ai-generated-static-websites",
     },
   ];
 
@@ -244,7 +270,7 @@ export default function Home() {
               Services
             </p>
             <h2 className="display-font text-3xl text-slate-950 sm:text-4xl">
-              Four core services I offer
+              Five core services I offer
             </h2>
           </div>
 

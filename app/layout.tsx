@@ -39,6 +39,9 @@ export const metadata: Metadata = {
     "multi-subsidiary website governance",
     "accessibility remediation",
     "Google Tag Manager consent",
+    "AI-generated static websites",
+    "Next.js static site generation",
+    "Vercel deployment",
   ],
   alternates: {
     canonical: "/",
