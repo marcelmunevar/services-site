@@ -2,17 +2,13 @@
 
 import posthog from "posthog-js";
 import NextLink from "next/link";
-import {
-  Box,
-  Breadcrumbs,
-  Button,
-  Card,
-  CardContent,
-  Container,
-  Link,
-  Typography,
-} from "@mui/material";
+import { Box, Container } from "@mui/material";
+import ServiceBreadcrumbs from "../../components/ServiceBreadcrumbs";
+import ServiceFitSection from "../../components/ServiceFitSection";
+import ServiceHeroPanel from "../../components/ServiceHeroPanel";
+import ServicePricingSection from "../../components/ServicePricingSection";
 import ServiceFaqSection from "../../components/ServiceFaqSection";
+import ServiceTwoColumnListSection from "../../components/ServiceTwoColumnListSection";
 import { bulletListSx } from "../../components/muiListStyles";
 
 type FAQItem = {
@@ -33,6 +29,45 @@ export default function EnterpriseWebConsultingContent({
     });
   };
 
+  const guidancePoints = [
+    {
+      title: "Use it for complex delivery periods",
+      body: "This service fits programs with launch pressure, migration risk, or coordination challenges across teams.",
+    },
+    {
+      title: "Bring in focused senior support",
+      body: "It works well when a team needs hands-on technical direction without committing to a full-time hire.",
+    },
+    {
+      title: "Keep execution aligned across stakeholders",
+      body: "The engagement supports delivery decisions across marketing, engineering, compliance, and leadership groups.",
+    },
+  ];
+
+  const proofPoints = [
+    { value: "Multi-brand", label: "Governance across teams" },
+    { value: "Launch-ready", label: "Support for critical delivery windows" },
+    { value: "Flexible", label: "Project or embedded models" },
+  ];
+
+  const pricingPlans = [
+    {
+      title: "Advisory Sprint",
+      price: "$1,500+",
+      description: "Focused architecture and implementation planning support.",
+    },
+    {
+      title: "Project Consulting",
+      price: "$4,000+",
+      description: "End-to-end support for migrations and launch initiatives.",
+    },
+    {
+      title: "Embedded Support",
+      price: "Custom",
+      description: "Part-time or ongoing enterprise consulting across teams.",
+    },
+  ];
+
   return (
     <Container
       component="main"
@@ -40,152 +75,58 @@ export default function EnterpriseWebConsultingContent({
       sx={{ flex: 1, py: { xs: 6, sm: 8 } }}
     >
       <Box sx={{ display: "grid", gap: 4 }}>
-        <Breadcrumbs aria-label="Breadcrumb" separator="/">
-          <Link component={NextLink} href="/" color="inherit" underline="hover">
-            Home
-          </Link>
-          <Link
-            component={NextLink}
-            href="/services"
-            color="inherit"
-            underline="hover"
-          >
-            Services
-          </Link>
-          <Typography color="text.primary" sx={{ fontWeight: 700 }}>
-            Enterprise Web Consulting
-          </Typography>
-        </Breadcrumbs>
+        <ServiceBreadcrumbs currentLabel="Enterprise Web Consulting" />
 
-        <Card>
-          <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
-            <Typography variant="overline" color="text.secondary">
-              Enterprise Web Consulting
-            </Typography>
-            <Typography variant="h1" sx={{ mt: 1.5 }}>
-              Senior web consulting for complex enterprise delivery
-            </Typography>
-            <Typography
-              sx={{
-                mt: 2,
-                maxWidth: 860,
-                color: "text.secondary",
-                lineHeight: 1.7,
-              }}
-            >
-              Support high-priority initiatives with implementation leadership,
-              practical technical direction, and delivery workflows that scale
-              across brands and teams.
-            </Typography>
-          </CardContent>
-        </Card>
+        <ServiceHeroPanel
+          eyebrow="Enterprise Web Consulting"
+          title="Senior web consulting for complex enterprise delivery"
+          description="Support high-priority initiatives with implementation leadership, practical technical direction, and delivery workflows that scale across brands and teams."
+          proofPoints={proofPoints}
+          sideTitle="When this is a fit"
+          guidancePoints={guidancePoints}
+        />
 
-        <Box
-          sx={{
-            display: "grid",
-            gap: 2.5,
-            gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+        <ServiceFitSection
+          eyebrow="Engagement fit"
+          title="Best for teams managing delivery risk across stakeholders"
+          description="This service is designed for organizations that need senior technical direction during migrations, launch periods, or other initiatives where delivery quality depends on consistent coordination."
+          callout="It helps when teams need practical leadership, implementation oversight, and a clearer path from planning to execution."
+        />
+
+        <ServiceTwoColumnListSection
+          left={{
+            title: "Consulting areas",
+            items: [
+              "Website migration planning and implementation support",
+              "Landing page build systems and release workflows",
+              "Performance optimization strategy and execution",
+              "Accessibility remediation and quality assurance",
+              "Governance for multi-brand and multi-team environments",
+              "CI/CD and modern frontend delivery support",
+            ],
           }}
-        >
-          <Card>
-            <CardContent sx={{ p: 3 }}>
-              <Typography variant="h2">Consulting areas</Typography>
-              <Box component="ul" sx={{ mt: 2, pl: 3, ...bulletListSx }}>
-                <li>Website migration planning and implementation support</li>
-                <li>Landing page build systems and release workflows</li>
-                <li>Performance optimization strategy and execution</li>
-                <li>Accessibility remediation and quality assurance</li>
-                <li>Governance for multi-brand and multi-team environments</li>
-                <li>CI/CD and modern frontend delivery support</li>
-              </Box>
-            </CardContent>
-          </Card>
+          right={{
+            title: "Engagement options",
+            items: [
+              "Project-based advisory and implementation support",
+              "Part-time embedded consulting",
+              "Technical lead coverage for launch-critical periods",
+              "Cross-functional collaboration with legal and compliance teams",
+            ],
+            cta: {
+              label: "Discuss enterprise consulting support",
+              href: "/#contact",
+              onClick: handleConsultationClick,
+            },
+          }}
+        />
 
-          <Card>
-            <CardContent sx={{ p: 3 }}>
-              <Typography variant="h2">Engagement options</Typography>
-              <Box component="ul" sx={{ mt: 2, pl: 3, ...bulletListSx }}>
-                <li>Project-based advisory and implementation support</li>
-                <li>Part-time embedded consulting</li>
-                <li>Technical lead coverage for launch-critical periods</li>
-                <li>
-                  Cross-functional collaboration with legal and compliance teams
-                </li>
-              </Box>
-              <Button
-                component={NextLink}
-                href="/#contact"
-                variant="contained"
-                onClick={handleConsultationClick}
-                sx={{ mt: 3 }}
-              >
-                Discuss enterprise consulting support
-              </Button>
-            </CardContent>
-          </Card>
-        </Box>
-
-        <Card>
-          <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
-            <Typography variant="overline" color="text.secondary">
-              Engagement Models
-            </Typography>
-            <Typography variant="h2" sx={{ mt: 1.5 }}>
-              Consulting options and typical pricing
-            </Typography>
-            <Typography
-              sx={{ mt: 1.5, maxWidth: 820, color: "text.secondary" }}
-            >
-              Typical ranges shown for planning. Final scope is based on team
-              size, delivery risk, and implementation depth.
-            </Typography>
-
-            <Box
-              sx={{
-                mt: 3,
-                display: "grid",
-                gap: 2,
-                gridTemplateColumns: { xs: "1fr", md: "1fr 1fr 1fr" },
-              }}
-            >
-              <Card>
-                <CardContent>
-                  <Typography variant="h4">Advisory Sprint</Typography>
-                  <Typography variant="h3" sx={{ mt: 1 }}>
-                    $1,500+
-                  </Typography>
-                  <Typography sx={{ mt: 1, color: "text.secondary" }}>
-                    Focused architecture and implementation planning support.
-                  </Typography>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent>
-                  <Typography variant="h4">Project Consulting</Typography>
-                  <Typography variant="h3" sx={{ mt: 1 }}>
-                    $4,000+
-                  </Typography>
-                  <Typography sx={{ mt: 1, color: "text.secondary" }}>
-                    End-to-end support for migrations and launch initiatives.
-                  </Typography>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent>
-                  <Typography variant="h4">Embedded Support</Typography>
-                  <Typography variant="h3" sx={{ mt: 1 }}>
-                    Custom
-                  </Typography>
-                  <Typography sx={{ mt: 1, color: "text.secondary" }}>
-                    Part-time or ongoing enterprise consulting across teams.
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Box>
-          </CardContent>
-        </Card>
+        <ServicePricingSection
+          eyebrow="Engagement Models"
+          title="Consulting options and typical pricing"
+          description="Typical ranges shown for planning. Final scope is based on team size, delivery risk, and implementation depth."
+          plans={pricingPlans}
+        />
 
         <ServiceFaqSection
           faqs={faqs}

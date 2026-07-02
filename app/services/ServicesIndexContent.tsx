@@ -4,15 +4,17 @@ import posthog from "posthog-js";
 import NextLink from "next/link";
 import {
   Box,
-  Breadcrumbs,
   Button,
   Card,
+  CardActions,
   CardContent,
   Container,
-  Link,
   Stack,
   Typography,
 } from "@mui/material";
+import ServiceBreadcrumbs from "../components/ServiceBreadcrumbs";
+import ServiceFitSection from "../components/ServiceFitSection";
+import ServiceHeroPanel from "../components/ServiceHeroPanel";
 
 type ServiceCard = {
   title: string;
@@ -32,6 +34,27 @@ export default function ServicesIndexContent({
     posthog.capture("service_card_clicked", { service });
   };
 
+  const guidancePoints = [
+    {
+      title: "Choose by delivery model",
+      body: "Some services are best for ongoing support, while others are built for one-time audits or focused implementation work.",
+    },
+    {
+      title: "Start with the bottleneck",
+      body: "If compliance, governance, maintenance, or delivery speed is creating risk, begin with the service closest to that problem.",
+    },
+    {
+      title: "Scope can stay practical",
+      body: "Most engagements can start small and expand only when the business case is clear.",
+    },
+  ];
+
+  const proofPoints = [
+    { value: `${services.length}`, label: "Service areas" },
+    { value: "Ongoing", label: "Support and care options" },
+    { value: "Fixed-scope", label: "Audit and project options" },
+  ];
+
   return (
     <Container
       component="main"
@@ -42,37 +65,26 @@ export default function ServicesIndexContent({
       }}
     >
       <Stack spacing={4}>
-        <Breadcrumbs aria-label="Breadcrumb" separator="/">
-          <Link component={NextLink} href="/" color="inherit" underline="hover">
-            Home
-          </Link>
-          <Typography color="text.primary" sx={{ fontWeight: 700 }}>
-            Services
-          </Typography>
-        </Breadcrumbs>
+        <ServiceBreadcrumbs
+          currentLabel="Services"
+          includeServicesLink={false}
+        />
 
-        <Card>
-          <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
-            <Typography variant="overline" color="text.secondary">
-              Services
-            </Typography>
-            <Typography variant="h1" sx={{ mt: 1.5 }}>
-              Technical website services built for growth and compliance
-            </Typography>
-            <Typography
-              sx={{
-                mt: 2,
-                maxWidth: 860,
-                color: "text.secondary",
-                lineHeight: 1.7,
-              }}
-            >
-              Choose the engagement model that matches your goals, from
-              recurring support to enterprise consulting and fixed-scope
-              implementation audits.
-            </Typography>
-          </CardContent>
-        </Card>
+        <ServiceHeroPanel
+          eyebrow="Services"
+          title="Technical website services for compliance, delivery, and growth."
+          description="Choose the engagement model that fits your priorities, from recurring support to enterprise consulting and fixed-scope implementation audits."
+          proofPoints={proofPoints}
+          sideTitle="How to choose"
+          guidancePoints={guidancePoints}
+        />
+
+        <ServiceFitSection
+          eyebrow="Engagement fit"
+          title="Pick the service that matches your current priority"
+          description="Some teams need ongoing maintenance and governance. Others need a focused audit, a privacy implementation project, or technical consulting during a high-risk delivery window."
+          callout="If you are not sure where to start, choose the option closest to your biggest operational risk. Scope can stay narrow and expand only when needed."
+        />
 
         <Box
           sx={{
@@ -94,15 +106,16 @@ export default function ServicesIndexContent({
                 >
                   {service.description}
                 </Typography>
-                <Button
-                  component={NextLink}
-                  href={service.href}
-                  variant="outlined"
-                  onClick={() => handleServiceCardClick(service.title)}
-                  sx={{ mt: 2.5 }}
-                >
-                  View service details
-                </Button>
+                <CardActions sx={{ px: 0, pt: 2 }}>
+                  <Button
+                    component={NextLink}
+                    href={service.href}
+                    variant="outlined"
+                    onClick={() => handleServiceCardClick(service.title)}
+                  >
+                    View service details
+                  </Button>
+                </CardActions>
               </CardContent>
             </Card>
           ))}

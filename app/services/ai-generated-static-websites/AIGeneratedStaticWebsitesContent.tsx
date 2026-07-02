@@ -4,15 +4,17 @@ import posthog from "posthog-js";
 import NextLink from "next/link";
 import {
   Box,
-  Breadcrumbs,
   Button,
   Card,
   CardContent,
   Container,
-  Link,
   Typography,
 } from "@mui/material";
+import ServiceBreadcrumbs from "../../components/ServiceBreadcrumbs";
+import ServiceFitSection from "../../components/ServiceFitSection";
 import ServiceFaqSection from "../../components/ServiceFaqSection";
+import ServiceHeroPanel from "../../components/ServiceHeroPanel";
+import ServiceTwoColumnListSection from "../../components/ServiceTwoColumnListSection";
 import { bulletListSx } from "../../components/muiListStyles";
 
 type FAQItem = {
@@ -34,6 +36,27 @@ export default function AIGeneratedStaticWebsitesContent({
     });
   };
 
+  const guidancePoints = [
+    {
+      title: "Use it when speed matters most",
+      body: "This service fits teams that need a credible web presence quickly without committing to a full traditional build process.",
+    },
+    {
+      title: "Start lean and iterate later",
+      body: "It works well when the initial priority is launch speed, clear content, and low hosting overhead rather than custom application complexity.",
+    },
+    {
+      title: "Keep ownership and costs simple",
+      body: "The model is designed around straightforward deployment, low platform overhead, and a path to scale only if needed.",
+    },
+  ];
+
+  const proofPoints = [
+    { value: "Static", label: "Fast, SEO-friendly delivery" },
+    { value: "Vercel", label: "Low-friction deployment" },
+    { value: "AI-assisted", label: "Faster content production" },
+  ];
+
   return (
     <Container
       component="main"
@@ -41,97 +64,56 @@ export default function AIGeneratedStaticWebsitesContent({
       sx={{ flex: 1, py: { xs: 6, sm: 8 } }}
     >
       <Box sx={{ display: "grid", gap: 4 }}>
-        <Breadcrumbs aria-label="Breadcrumb" separator="/">
-          <Link component={NextLink} href="/" color="inherit" underline="hover">
-            Home
-          </Link>
-          <Link
-            component={NextLink}
-            href="/services"
-            color="inherit"
-            underline="hover"
-          >
-            Services
-          </Link>
-          <Typography color="text.primary" sx={{ fontWeight: 700 }}>
-            AI-Generated Static Websites
-          </Typography>
-        </Breadcrumbs>
+        <ServiceBreadcrumbs currentLabel="AI-Generated Static Websites" />
 
-        <Card>
-          <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
-            <Typography variant="overline" color="text.secondary">
-              AI-Generated Static Websites
-            </Typography>
-            <Typography variant="h1" sx={{ mt: 1.5 }}>
-              A professional web presence, built with AI and deployed for free
-            </Typography>
-            <Typography
-              sx={{
-                mt: 2,
-                maxWidth: 860,
-                color: "text.secondary",
-                lineHeight: 1.7,
-              }}
-            >
-              Get a fast, fully responsive static website without the cost of
-              traditional web development. AI drafts the content, Next.js powers
-              the build, and Vercel hosts it on a global CDN, often at zero
-              hosting cost.
-            </Typography>
-          </CardContent>
-        </Card>
+        <ServiceHeroPanel
+          eyebrow="AI-Generated Static Websites"
+          title="A professional web presence, built with AI and deployed for free"
+          description="Get a fast, fully responsive static website without the cost of traditional web development. AI drafts the content, Next.js powers the build, and Vercel hosts it on a global CDN, often at zero hosting cost."
+          proofPoints={proofPoints}
+          sideTitle="When this is a fit"
+          guidancePoints={guidancePoints}
+        />
 
-        <Box
-          sx={{
-            display: "grid",
-            gap: 2.5,
-            gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+        <ServiceFitSection
+          eyebrow="Engagement fit"
+          title="Best for teams that need a fast launch without a heavy build process"
+          description="This service is designed for businesses, creators, and internal teams that need a polished website quickly and do not need a complex web application on day one."
+          callout="It is a strong fit when launch speed, simplicity, and low ongoing platform cost matter more than deep customization."
+        />
+
+        <ServiceTwoColumnListSection
+          left={{
+            title: "What you get",
+            items: [
+              "AI-powered content generation from your brief",
+              "Next.js static site generation (fast, SEO-friendly)",
+              "Vercel account creation and project setup",
+              "Free tier Vercel deployment with global CDN",
+              "Fully responsive, mobile-first design",
+              "SEO-optimized markup and metadata",
+              "Custom domain configuration (you provide the domain)",
+              "Automatic HTTPS and deployment automation",
+              "No monthly hosting cost for initial deployment",
+            ],
           }}
-        >
-          <Card>
-            <CardContent sx={{ p: 3 }}>
-              <Typography variant="h2">What you get</Typography>
-              <Box component="ul" sx={{ mt: 2, pl: 3, ...bulletListSx }}>
-                <li>AI-powered content generation from your brief</li>
-                <li>Next.js static site generation (fast, SEO-friendly)</li>
-                <li>Vercel account creation and project setup</li>
-                <li>Free tier Vercel deployment with global CDN</li>
-                <li>Fully responsive, mobile-first design</li>
-                <li>SEO-optimized markup and metadata</li>
-                <li>Custom domain configuration (you provide the domain)</li>
-                <li>Automatic HTTPS and deployment automation</li>
-                <li>No monthly hosting cost for initial deployment</li>
-              </Box>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent sx={{ p: 3 }}>
-              <Typography variant="h2">Best for</Typography>
-              <Box component="ul" sx={{ mt: 2, pl: 3, ...bulletListSx }}>
-                <li>Personal and professional portfolios</li>
-                <li>Product or service landing pages</li>
-                <li>Documentation and knowledge base sites</li>
-                <li>Small business brochure websites</li>
-                <li>Event or campaign pages</li>
-                <li>
-                  Anyone who wants a fast, professional site without ongoing
-                  hosting bills
-                </li>
-              </Box>
-              <Button
-                component={NextLink}
-                href="/#contact"
-                variant="contained"
-                onClick={() => trackConsultation()}
-                sx={{ mt: 3 }}
-              >
-                Book a discovery call
-              </Button>
-            </CardContent>
-          </Card>
-        </Box>
+          right={{
+            title: "Best for",
+            items: [
+              "Personal and professional portfolios",
+              "Product or service landing pages",
+              "Documentation and knowledge base sites",
+              "Small business brochure websites",
+              "Event or campaign pages",
+              "Anyone who wants a fast, professional site without ongoing hosting bills",
+            ],
+            cta: {
+              label: "Book a discovery call",
+              href: "/#contact",
+              onClick: () => trackConsultation(),
+            },
+          }}
+        />
 
         <Card>
           <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
