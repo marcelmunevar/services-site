@@ -62,10 +62,7 @@ export default function EnterpriseWebConsultingContent({
             <Typography variant="overline" color="text.secondary">
               Enterprise Web Consulting
             </Typography>
-            <Typography
-              variant="h1"
-              sx={{ mt: 1.5, fontSize: { xs: "2rem", sm: "3rem" } }}
-            >
+            <Typography variant="h1" sx={{ mt: 1.5 }}>
               Senior web consulting for complex enterprise delivery
             </Typography>
             <Typography
@@ -92,9 +89,7 @@ export default function EnterpriseWebConsultingContent({
         >
           <Card>
             <CardContent sx={{ p: 3 }}>
-              <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
-                Consulting areas
-              </Typography>
+              <Typography variant="h2">Consulting areas</Typography>
               <Box component="ul" sx={{ mt: 2, pl: 3, ...bulletListSx }}>
                 <li>Website migration planning and implementation support</li>
                 <li>Landing page build systems and release workflows</li>
@@ -108,9 +103,7 @@ export default function EnterpriseWebConsultingContent({
 
           <Card>
             <CardContent sx={{ p: 3 }}>
-              <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
-                Engagement options
-              </Typography>
+              <Typography variant="h2">Engagement options</Typography>
               <Box component="ul" sx={{ mt: 2, pl: 3, ...bulletListSx }}>
                 <li>Project-based advisory and implementation support</li>
                 <li>Part-time embedded consulting</li>
@@ -137,7 +130,7 @@ export default function EnterpriseWebConsultingContent({
             <Typography variant="overline" color="text.secondary">
               Engagement Models
             </Typography>
-            <Typography variant="h2" sx={{ mt: 1.5, fontSize: "2rem" }}>
+            <Typography variant="h2" sx={{ mt: 1.5 }}>
               Consulting options and typical pricing
             </Typography>
             <Typography
@@ -157,10 +150,8 @@ export default function EnterpriseWebConsultingContent({
             >
               <Card>
                 <CardContent>
-                  <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
-                    Advisory Sprint
-                  </Typography>
-                  <Typography variant="h3" sx={{ mt: 1, fontSize: "2rem" }}>
+                  <Typography variant="h4">Advisory Sprint</Typography>
+                  <Typography variant="h3" sx={{ mt: 1 }}>
                     $1,500+
                   </Typography>
                   <Typography sx={{ mt: 1, color: "text.secondary" }}>
@@ -171,10 +162,8 @@ export default function EnterpriseWebConsultingContent({
 
               <Card>
                 <CardContent>
-                  <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
-                    Project Consulting
-                  </Typography>
-                  <Typography variant="h3" sx={{ mt: 1, fontSize: "2rem" }}>
+                  <Typography variant="h4">Project Consulting</Typography>
+                  <Typography variant="h3" sx={{ mt: 1 }}>
                     $4,000+
                   </Typography>
                   <Typography sx={{ mt: 1, color: "text.secondary" }}>
@@ -185,10 +174,8 @@ export default function EnterpriseWebConsultingContent({
 
               <Card>
                 <CardContent>
-                  <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
-                    Embedded Support
-                  </Typography>
-                  <Typography variant="h3" sx={{ mt: 1, fontSize: "2rem" }}>
+                  <Typography variant="h4">Embedded Support</Typography>
+                  <Typography variant="h3" sx={{ mt: 1 }}>
                     Custom
                   </Typography>
                   <Typography sx={{ mt: 1, color: "text.secondary" }}>

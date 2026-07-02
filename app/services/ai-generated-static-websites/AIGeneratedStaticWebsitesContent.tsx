@@ -63,10 +63,7 @@ export default function AIGeneratedStaticWebsitesContent({
             <Typography variant="overline" color="text.secondary">
               AI-Generated Static Websites
             </Typography>
-            <Typography
-              variant="h1"
-              sx={{ mt: 1.5, fontSize: { xs: "2rem", sm: "3rem" } }}
-            >
+            <Typography variant="h1" sx={{ mt: 1.5 }}>
               A professional web presence, built with AI and deployed for free
             </Typography>
             <Typography
@@ -94,9 +91,7 @@ export default function AIGeneratedStaticWebsitesContent({
         >
           <Card>
             <CardContent sx={{ p: 3 }}>
-              <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
-                What you get
-              </Typography>
+              <Typography variant="h2">What you get</Typography>
               <Box component="ul" sx={{ mt: 2, pl: 3, ...bulletListSx }}>
                 <li>AI-powered content generation from your brief</li>
                 <li>Next.js static site generation (fast, SEO-friendly)</li>
@@ -113,9 +108,7 @@ export default function AIGeneratedStaticWebsitesContent({
 
           <Card>
             <CardContent sx={{ p: 3 }}>
-              <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
-                Best for
-              </Typography>
+              <Typography variant="h2">Best for</Typography>
               <Box component="ul" sx={{ mt: 2, pl: 3, ...bulletListSx }}>
                 <li>Personal and professional portfolios</li>
                 <li>Product or service landing pages</li>
@@ -145,7 +138,7 @@ export default function AIGeneratedStaticWebsitesContent({
             <Typography variant="overline" color="text.secondary">
               Process
             </Typography>
-            <Typography variant="h2" sx={{ mt: 1.5, fontSize: "2rem" }}>
+            <Typography variant="h2" sx={{ mt: 1.5 }}>
               From brief to live site in days
             </Typography>
             <Typography
@@ -168,7 +161,7 @@ export default function AIGeneratedStaticWebsitesContent({
                   <Typography variant="overline" color="text.secondary">
                     Step 1
                   </Typography>
-                  <Typography sx={{ mt: 1, fontSize: "1rem", fontWeight: 700 }}>
+                  <Typography variant="h4" sx={{ mt: 1 }}>
                     AI Generation
                   </Typography>
                   <Typography
@@ -186,7 +179,7 @@ export default function AIGeneratedStaticWebsitesContent({
                   <Typography variant="overline" color="text.secondary">
                     Step 2
                   </Typography>
-                  <Typography sx={{ mt: 1, fontSize: "1rem", fontWeight: 700 }}>
+                  <Typography variant="h4" sx={{ mt: 1 }}>
                     Build and Review
                   </Typography>
                   <Typography
@@ -204,7 +197,7 @@ export default function AIGeneratedStaticWebsitesContent({
                   <Typography variant="overline" color="text.secondary">
                     Step 3
                   </Typography>
-                  <Typography sx={{ mt: 1, fontSize: "1rem", fontWeight: 700 }}>
+                  <Typography variant="h4" sx={{ mt: 1 }}>
                     Deploy to Vercel
                   </Typography>
                   <Typography
@@ -225,7 +218,7 @@ export default function AIGeneratedStaticWebsitesContent({
             <Typography variant="overline" color="text.secondary">
               Hosting and Costs
             </Typography>
-            <Typography variant="h2" sx={{ mt: 1.5, fontSize: "2rem" }}>
+            <Typography variant="h2" sx={{ mt: 1.5 }}>
               Vercel free tier: what is included and what to know
             </Typography>
 
@@ -238,9 +231,7 @@ export default function AIGeneratedStaticWebsitesContent({
               }}
             >
               <Box>
-                <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
-                  Free tier includes
-                </Typography>
+                <Typography variant="h4">Free tier includes</Typography>
                 <Box component="ul" sx={{ mt: 1.5, pl: 3, ...bulletListSx }}>
                   <li>Global CDN hosting (100GB bandwidth/month)</li>
                   <li>Automatic HTTPS and SSL certificates</li>
@@ -252,7 +243,7 @@ export default function AIGeneratedStaticWebsitesContent({
               </Box>
 
               <Box>
-                <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
+                <Typography variant="h4">
                   Free tier limitations to note
                 </Typography>
                 <Box component="ul" sx={{ mt: 1.5, pl: 3, ...bulletListSx }}>
@@ -283,7 +274,7 @@ export default function AIGeneratedStaticWebsitesContent({
             <Typography variant="overline" color="text.secondary">
               Get started
             </Typography>
-            <Typography variant="h2" sx={{ mt: 1.5, fontSize: "2rem" }}>
+            <Typography variant="h2" sx={{ mt: 1.5 }}>
               Ready to launch your site?
             </Typography>
             <Typography

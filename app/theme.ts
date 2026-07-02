@@ -1,6 +1,6 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     mode: "light",
     primary: {
@@ -21,17 +21,36 @@ const theme = createTheme({
   typography: {
     fontFamily: 'var(--font-body), "Segoe UI", sans-serif',
     h1: {
+      fontSize: "2.5rem",
       fontWeight: 700,
+      lineHeight: 1.15,
     },
     h2: {
+      fontSize: "1.75rem",
       fontWeight: 700,
+      lineHeight: 1.2,
     },
     h3: {
+      fontSize: "1.25rem",
       fontWeight: 700,
+      lineHeight: 1.25,
+    },
+    h4: {
+      fontSize: "1rem",
+      fontWeight: 700,
+      lineHeight: 1.3,
+    },
+    body1: {
+      lineHeight: 1.7,
+    },
+    body2: {
+      lineHeight: 1.6,
     },
     overline: {
-      fontWeight: 700,
-      letterSpacing: "0.08em",
+      fontSize: "0.75rem",
+      fontWeight: 600,
+      letterSpacing: "0.06em",
+      textTransform: "uppercase",
       color: "#334155",
     },
     button: {
@@ -94,6 +113,10 @@ const theme = createTheme({
       },
     },
   },
+});
+
+theme = responsiveFontSizes(theme, {
+  variants: ["h1", "h2", "h3", "h4"],
 });
 
 export default theme;

@@ -62,10 +62,7 @@ export default function ProductizedWebsiteServicesContent({
             <Typography variant="overline" color="text.secondary">
               Website Compliance Audits and Checklists
             </Typography>
-            <Typography
-              variant="h1"
-              sx={{ mt: 1.5, fontSize: { xs: "2rem", sm: "3rem" } }}
-            >
+            <Typography variant="h1" sx={{ mt: 1.5 }}>
               Independent audits and reports for teams that want to
               self-remediate
             </Typography>
@@ -86,7 +83,6 @@ export default function ProductizedWebsiteServicesContent({
                 mt: 1.5,
                 maxWidth: 860,
                 color: "text.secondary",
-                fontSize: "0.95rem",
               }}
             >
               Best for companies with internal dev resources looking for a
@@ -105,9 +101,7 @@ export default function ProductizedWebsiteServicesContent({
         >
           <Card>
             <CardContent sx={{ p: 3 }}>
-              <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
-                What you receive
-              </Typography>
+              <Typography variant="h2">What you receive</Typography>
               <Box component="ul" sx={{ mt: 2, pl: 3, ...bulletListSx }}>
                 <li>
                   Website compliance audit report (privacy, security,
@@ -125,9 +119,7 @@ export default function ProductizedWebsiteServicesContent({
 
           <Card>
             <CardContent sx={{ p: 3 }}>
-              <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
-                Best for
-              </Typography>
+              <Typography variant="h2">Best for</Typography>
               <Box component="ul" sx={{ mt: 2, pl: 3, ...bulletListSx }}>
                 <li>
                   Companies with internal dev resources that want a one-time
@@ -164,7 +156,7 @@ export default function ProductizedWebsiteServicesContent({
             <Typography variant="overline" color="text.secondary">
               Pricing
             </Typography>
-            <Typography variant="h2" sx={{ mt: 1.5, fontSize: "2rem" }}>
+            <Typography variant="h2" sx={{ mt: 1.5 }}>
               Audit package options
             </Typography>
             <Typography
@@ -184,10 +176,8 @@ export default function ProductizedWebsiteServicesContent({
             >
               <Card>
                 <CardContent>
-                  <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
-                    Single Audit
-                  </Typography>
-                  <Typography variant="h3" sx={{ mt: 1, fontSize: "2rem" }}>
+                  <Typography variant="h4">Single Audit</Typography>
+                  <Typography variant="h3" sx={{ mt: 1 }}>
                     $600+
                   </Typography>
                   <Typography sx={{ mt: 1, color: "text.secondary" }}>
@@ -198,10 +188,8 @@ export default function ProductizedWebsiteServicesContent({
 
               <Card>
                 <CardContent>
-                  <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
-                    Audit + Guide
-                  </Typography>
-                  <Typography variant="h3" sx={{ mt: 1, fontSize: "2rem" }}>
+                  <Typography variant="h4">Audit + Guide</Typography>
+                  <Typography variant="h3" sx={{ mt: 1 }}>
                     $1,200+
                   </Typography>
                   <Typography sx={{ mt: 1, color: "text.secondary" }}>
@@ -212,10 +200,8 @@ export default function ProductizedWebsiteServicesContent({
 
               <Card>
                 <CardContent>
-                  <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
-                    Bundle Package
-                  </Typography>
-                  <Typography variant="h3" sx={{ mt: 1, fontSize: "2rem" }}>
+                  <Typography variant="h4">Bundle Package</Typography>
+                  <Typography variant="h3" sx={{ mt: 1 }}>
                     $2,500+
                   </Typography>
                   <Typography sx={{ mt: 1, color: "text.secondary" }}>

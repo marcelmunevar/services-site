@@ -62,10 +62,7 @@ export default function WebsiteCarePlansContent({
             <Typography variant="overline" color="text.secondary">
               Website Care Plans
             </Typography>
-            <Typography
-              variant="h1"
-              sx={{ mt: 1.5, fontSize: { xs: "2rem", sm: "3rem" } }}
-            >
+            <Typography variant="h1" sx={{ mt: 1.5 }}>
               Ongoing website support with predictable monthly coverage
             </Typography>
             <Typography
@@ -92,9 +89,7 @@ export default function WebsiteCarePlansContent({
         >
           <Card>
             <CardContent sx={{ p: 3 }}>
-              <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
-                What is covered
-              </Typography>
+              <Typography variant="h2">What is covered</Typography>
               <Box component="ul" sx={{ mt: 2, pl: 3, ...bulletListSx }}>
                 <li>WordPress core, plugin, and theme updates</li>
                 <li>Security monitoring and incident response support</li>
@@ -108,9 +103,7 @@ export default function WebsiteCarePlansContent({
 
           <Card>
             <CardContent sx={{ p: 3 }}>
-              <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
-                Why teams choose care plans
-              </Typography>
+              <Typography variant="h2">Why teams choose care plans</Typography>
               <Box component="ul" sx={{ mt: 2, pl: 3, ...bulletListSx }}>
                 <li>Reduce risk of security and uptime issues</li>
                 <li>Avoid delayed updates and technical debt</li>
@@ -135,7 +128,7 @@ export default function WebsiteCarePlansContent({
             <Typography variant="overline" color="text.secondary">
               Plans
             </Typography>
-            <Typography variant="h2" sx={{ mt: 1.5, fontSize: "2rem" }}>
+            <Typography variant="h2" sx={{ mt: 1.5 }}>
               Monthly website care plan options
             </Typography>
             <Typography
@@ -156,10 +149,8 @@ export default function WebsiteCarePlansContent({
             >
               <Card>
                 <CardContent>
-                  <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
-                    Essential Care
-                  </Typography>
-                  <Typography variant="h3" sx={{ mt: 1, fontSize: "2rem" }}>
+                  <Typography variant="h4">Essential Care</Typography>
+                  <Typography variant="h3" sx={{ mt: 1 }}>
                     $150/mo+
                   </Typography>
                   <Typography sx={{ mt: 1, color: "text.secondary" }}>
@@ -170,10 +161,8 @@ export default function WebsiteCarePlansContent({
 
               <Card>
                 <CardContent>
-                  <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
-                    Growth Care
-                  </Typography>
-                  <Typography variant="h3" sx={{ mt: 1, fontSize: "2rem" }}>
+                  <Typography variant="h4">Growth Care</Typography>
+                  <Typography variant="h3" sx={{ mt: 1 }}>
                     $300/mo+
                   </Typography>
                   <Typography sx={{ mt: 1, color: "text.secondary" }}>
@@ -184,10 +173,8 @@ export default function WebsiteCarePlansContent({
 
               <Card>
                 <CardContent>
-                  <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
-                    Enterprise Care
-                  </Typography>
-                  <Typography variant="h3" sx={{ mt: 1, fontSize: "2rem" }}>
+                  <Typography variant="h4">Enterprise Care</Typography>
+                  <Typography variant="h3" sx={{ mt: 1 }}>
                     Custom
                   </Typography>
                   <Typography sx={{ mt: 1, color: "text.secondary" }}>

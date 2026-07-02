@@ -59,10 +59,7 @@ export default function DNSManagementEdgeServicesContent({
             <Typography variant="overline" color="text.secondary">
               DNS and Edge Operations
             </Typography>
-            <Typography
-              variant="h1"
-              sx={{ mt: 1.5, fontSize: { xs: "2rem", sm: "3rem" } }}
-            >
+            <Typography variant="h1" sx={{ mt: 1.5 }}>
               Client-owned Cloudflare setup and managed DNS operations
             </Typography>
             <Typography
@@ -91,9 +88,7 @@ export default function DNSManagementEdgeServicesContent({
         >
           <Card>
             <CardContent sx={{ p: 3 }}>
-              <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
-                Included deliverables
-              </Typography>
+              <Typography variant="h2">Included deliverables</Typography>
               <Box
                 component="ul"
                 sx={{
@@ -117,14 +112,11 @@ export default function DNSManagementEdgeServicesContent({
 
           <Card>
             <CardContent sx={{ p: 3 }}>
-              <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
-                Engagement model
-              </Typography>
+              <Typography variant="h2">Engagement model</Typography>
               <Typography
                 sx={{
                   mt: 2,
                   color: "text.secondary",
-                  fontSize: "0.95rem",
                   lineHeight: 1.7,
                 }}
               >

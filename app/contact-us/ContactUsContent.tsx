@@ -30,13 +30,7 @@ export default function ContactUsContent() {
       }}
     >
       <Stack spacing={3}>
-        <Typography
-          variant="h1"
-          sx={{
-            fontSize: { xs: "2.25rem", sm: "3rem" },
-            color: "text.primary",
-          }}
-        >
+        <Typography variant="h1" sx={{ color: "text.primary" }}>
           Contact Us
         </Typography>
 
@@ -47,7 +41,7 @@ export default function ContactUsContent() {
 
         <Card>
           <CardContent sx={{ p: 3 }}>
-            <Typography variant="h2" sx={{ fontSize: "1.25rem", mb: 1 }}>
+            <Typography variant="h2" sx={{ mb: 1 }}>
               Email
             </Typography>
             <Typography sx={{ color: "text.secondary" }}>
@@ -66,7 +60,7 @@ export default function ContactUsContent() {
 
         <Card>
           <CardContent sx={{ p: 3 }}>
-            <Typography variant="h2" sx={{ fontSize: "1.25rem", mb: 1 }}>
+            <Typography variant="h2" sx={{ mb: 1 }}>
               Send a Message
             </Typography>
             <Typography sx={{ color: "text.secondary", mb: 2 }}>

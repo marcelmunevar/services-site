@@ -46,7 +46,6 @@ export default function LayoutShell({ children, year }: LayoutShellProps) {
               underline="none"
               color="text.primary"
               sx={{
-                fontSize: { xs: "1.25rem", sm: "1.5rem" },
                 fontWeight: 700,
                 lineHeight: 1.1,
               }}
@@ -61,27 +60,16 @@ export default function LayoutShell({ children, year }: LayoutShellProps) {
                 gap: { xs: 1, sm: 1.25 },
               }}
             >
-              <Button
-                component={NextLink}
-                href="/"
-                color="inherit"
-                sx={{ fontSize: "0.9rem" }}
-              >
+              <Button component={NextLink} href="/" color="inherit">
                 Home
               </Button>
-              <Button
-                component={NextLink}
-                href="/services"
-                color="inherit"
-                sx={{ fontSize: "0.9rem" }}
-              >
+              <Button component={NextLink} href="/services" color="inherit">
                 Services
               </Button>
               <Button
                 component={NextLink}
                 href="/contact-us"
                 variant="contained"
-                sx={{ fontSize: "0.9rem" }}
               >
                 Contact
               </Button>

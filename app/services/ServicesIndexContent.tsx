@@ -56,10 +56,7 @@ export default function ServicesIndexContent({
             <Typography variant="overline" color="text.secondary">
               Services
             </Typography>
-            <Typography
-              variant="h1"
-              sx={{ mt: 1.5, fontSize: { xs: "2.1rem", sm: "3rem" } }}
-            >
+            <Typography variant="h1" sx={{ mt: 1.5 }}>
               Technical website services built for growth and compliance
             </Typography>
             <Typography
@@ -87,14 +84,11 @@ export default function ServicesIndexContent({
           {services.map((service) => (
             <Card key={service.href}>
               <CardContent sx={{ p: 3 }}>
-                <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
-                  {service.title}
-                </Typography>
+                <Typography variant="h2">{service.title}</Typography>
                 <Typography
                   sx={{
                     mt: 1.5,
                     color: "text.secondary",
-                    fontSize: "0.95rem",
                     lineHeight: 1.7,
                   }}
                 >

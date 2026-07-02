@@ -56,26 +56,12 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
                 Professional Web Services
               </Typography>
 
-              <Typography
-                variant="h1"
-                sx={{
-                  maxWidth: 760,
-                  fontSize: { xs: "2.25rem", sm: "3rem", lg: "3.75rem" },
-                  lineHeight: 1.04,
-                }}
-              >
+              <Typography variant="h1" sx={{ maxWidth: 760 }}>
                 I help businesses with privacy, maintenance, consulting, and
                 audits.
               </Typography>
 
-              <Typography
-                sx={{
-                  maxWidth: 720,
-                  fontSize: { xs: "1.05rem", sm: "1.2rem" },
-                  color: "text.secondary",
-                  lineHeight: 1.7,
-                }}
-              >
+              <Typography sx={{ maxWidth: 720, color: "text.secondary" }}>
                 I am a professional web partner focused on measurable outcomes:
                 compliant tracking, healthier websites, faster delivery, and
                 clear implementation standards.
@@ -130,18 +116,8 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
                   ].map((item) => (
                     <Card key={item.title}>
                       <CardContent sx={{ p: 2 }}>
-                        <Typography
-                          sx={{ fontSize: "0.9rem", fontWeight: 700 }}
-                        >
-                          {item.title}
-                        </Typography>
-                        <Typography
-                          sx={{
-                            mt: 0.5,
-                            fontSize: "0.88rem",
-                            color: "text.secondary",
-                          }}
-                        >
+                        <Typography variant="h4">{item.title}</Typography>
+                        <Typography sx={{ mt: 0.5, color: "text.secondary" }}>
                           {item.body}
                         </Typography>
                       </CardContent>
@@ -166,10 +142,7 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
               <Typography variant="overline" color="text.secondary">
                 Enterprise Experience
               </Typography>
-              <Typography
-                variant="h2"
-                sx={{ mt: 1.5, fontSize: { xs: "2rem", sm: "2.5rem" } }}
-              >
+              <Typography variant="h2" sx={{ mt: 1.5 }}>
                 Proven compliance implementation across complex organizations
               </Typography>
             </Box>
@@ -197,10 +170,7 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
             <Typography variant="overline" color="text.secondary">
               Services
             </Typography>
-            <Typography
-              variant="h2"
-              sx={{ fontSize: { xs: "2rem", sm: "2.5rem" } }}
-            >
+            <Typography variant="h2">
               {serviceTracks.length} core services I offer
             </Typography>
           </Box>
@@ -218,7 +188,7 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
                   <Typography variant="overline" color="text.secondary">
                     {track.value}
                   </Typography>
-                  <Typography variant="h3" sx={{ mt: 1, fontSize: "1.5rem" }}>
+                  <Typography variant="h3" sx={{ mt: 1 }}>
                     {track.title}
                   </Typography>
                   <Box component="ul" sx={{ mt: 2, pl: 3, ...bulletListSx }}>
@@ -258,7 +228,7 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
               <Typography variant="overline" color="text.secondary">
                 Approach
               </Typography>
-              <Typography variant="h3" sx={{ mt: 1.5, fontSize: "2rem" }}>
+              <Typography variant="h3" sx={{ mt: 1.5 }}>
                 Technical execution with business clarity.
               </Typography>
             </Box>
@@ -280,10 +250,7 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
             <Typography variant="overline" color="text.secondary">
               Next step
             </Typography>
-            <Typography
-              variant="h2"
-              sx={{ mt: 1.5, fontSize: { xs: "2rem", sm: "2.5rem" } }}
-            >
+            <Typography variant="h2" sx={{ mt: 1.5 }}>
               Let&apos;s talk about your website goals.
             </Typography>
             <Typography

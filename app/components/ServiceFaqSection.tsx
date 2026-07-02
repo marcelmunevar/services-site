@@ -58,7 +58,7 @@ export default function ServiceFaqSection({
                   color: "text.primary",
                 }}
               >
-                {faq.question}
+                <Typography variant="h4">{faq.question}</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography sx={{ color: "text.secondary", lineHeight: 1.7 }}>

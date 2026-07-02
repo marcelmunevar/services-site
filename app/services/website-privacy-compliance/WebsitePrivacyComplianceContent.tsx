@@ -65,10 +65,7 @@ export default function WebsitePrivacyComplianceContent({
             <Typography variant="overline" color="text.secondary">
               Website Privacy Compliance
             </Typography>
-            <Typography
-              variant="h1"
-              sx={{ mt: 1.5, fontSize: { xs: "2rem", sm: "3rem" } }}
-            >
+            <Typography variant="h1" sx={{ mt: 1.5 }}>
               Privacy implementation for modern marketing websites
             </Typography>
             <Typography
@@ -95,9 +92,7 @@ export default function WebsitePrivacyComplianceContent({
         >
           <Card>
             <CardContent sx={{ p: 3 }}>
-              <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
-                Included services
-              </Typography>
+              <Typography variant="h2">Included services</Typography>
               <Box
                 component="ul"
                 sx={{
@@ -118,9 +113,7 @@ export default function WebsitePrivacyComplianceContent({
 
           <Card>
             <CardContent sx={{ p: 3 }}>
-              <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
-                Ideal for
-              </Typography>
+              <Typography variant="h2">Ideal for</Typography>
               <Box
                 component="ul"
                 sx={{
@@ -159,7 +152,7 @@ export default function WebsitePrivacyComplianceContent({
             <Typography variant="overline" color="text.secondary">
               Packages
             </Typography>
-            <Typography variant="h2" sx={{ mt: 1.5, fontSize: "2rem" }}>
+            <Typography variant="h2" sx={{ mt: 1.5 }}>
               Privacy compliance package options
             </Typography>
             <Typography
@@ -179,10 +172,8 @@ export default function WebsitePrivacyComplianceContent({
             >
               <Card>
                 <CardContent>
-                  <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
-                    Audit Sprint
-                  </Typography>
-                  <Typography variant="h3" sx={{ mt: 1, fontSize: "2rem" }}>
+                  <Typography variant="h4">Audit Sprint</Typography>
+                  <Typography variant="h3" sx={{ mt: 1 }}>
                     $750+
                   </Typography>
                   <Typography sx={{ mt: 1, color: "text.secondary" }}>
@@ -193,10 +184,8 @@ export default function WebsitePrivacyComplianceContent({
 
               <Card>
                 <CardContent>
-                  <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
-                    Implementation Project
-                  </Typography>
-                  <Typography variant="h3" sx={{ mt: 1, fontSize: "2rem" }}>
+                  <Typography variant="h4">Implementation Project</Typography>
+                  <Typography variant="h3" sx={{ mt: 1 }}>
                     $2,000+
                   </Typography>
                   <Typography sx={{ mt: 1, color: "text.secondary" }}>
@@ -207,10 +196,8 @@ export default function WebsitePrivacyComplianceContent({
 
               <Card>
                 <CardContent>
-                  <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
-                    Monthly Monitoring
-                  </Typography>
-                  <Typography variant="h3" sx={{ mt: 1, fontSize: "2rem" }}>
+                  <Typography variant="h4">Monthly Monitoring</Typography>
+                  <Typography variant="h3" sx={{ mt: 1 }}>
                     $300+/mo
                   </Typography>
                   <Typography sx={{ mt: 1, color: "text.secondary" }}>

@@ -31,12 +31,7 @@ export default function LegalDocumentContent({
     >
       <Box sx={{ display: "grid", gap: 3.5 }}>
         <Box sx={{ display: "grid", gap: 1 }}>
-          <Typography
-            variant="h1"
-            sx={{ fontSize: { xs: "2.25rem", sm: "3rem" } }}
-          >
-            {title}
-          </Typography>
+          <Typography variant="h1">{title}</Typography>
           <Typography variant="body2" sx={{ color: "text.secondary" }}>
             Last updated: {lastUpdated}
           </Typography>
@@ -48,9 +43,7 @@ export default function LegalDocumentContent({
             sx={{ display: "grid", gap: 1.5 }}
           >
             {section.heading ? (
-              <Typography variant="h2" sx={{ fontSize: "1.35rem" }}>
-                {section.heading}
-              </Typography>
+              <Typography variant="h2">{section.heading}</Typography>
             ) : null}
 
             {section.paragraphs?.map((paragraph, paragraphIndex) => (
