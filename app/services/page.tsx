@@ -38,6 +38,12 @@ const services = [
     description:
       "Independent compliance audit reports for teams that want to self-remediate. Covers privacy, security, accessibility, cookie inventory, and includes an implementation guide with templates.",
   },
+  {
+    title: "AI-Generated Static Websites",
+    href: "/services/ai-generated-static-websites",
+    description:
+      "Cost-effective static websites built with AI and Next.js, deployed to Vercel's free tier. Ideal for portfolios, landing pages, and small business sites.",
+  },
 ];
 
 export default function ServicesIndexPage() {

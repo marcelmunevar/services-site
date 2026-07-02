@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/website-care-plans",
     "/services/enterprise-web-consulting",
     "/services/productized-website-services",
+    "/services/ai-generated-static-websites",
   ];
 
   return routes.map((route, index) => ({
