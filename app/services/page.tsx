@@ -38,6 +38,12 @@ const services = [
     description:
       "Fixed-scope compliance audits, accessibility reports, cookie inventory reports, and implementation guides.",
   },
+  {
+    title: "AI-Generated Static Websites",
+    href: "/services/ai-generated-static-websites",
+    description:
+      "Cost-effective static websites built with AI and Next.js, deployed to Vercel's free tier. Ideal for portfolios, landing pages, and small business sites.",
+  },
 ];
 
 export default function ServicesIndexPage() {
