@@ -79,7 +79,7 @@ const serviceDefinitions: ServiceDefinition[] = [
   },
   {
     title: "Website Compliance Audits & Checklists",
-    href: "/services/productized-website-services",
+    href: "/services/website-compliance-audits",
     servicesDescription:
       "Independent compliance audit reports for teams that want to self-remediate. Covers privacy, security, accessibility, cookie inventory, and includes an implementation guide with templates.",
     homeValue:

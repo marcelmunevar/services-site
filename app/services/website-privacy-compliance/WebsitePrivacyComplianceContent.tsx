@@ -53,18 +53,18 @@ export default function WebsitePrivacyComplianceContent({
   const packagePlans = [
     {
       title: "Audit Sprint",
-      price: "$750+",
+
       description:
         "Consent and tag audit with prioritized implementation plan.",
     },
     {
       title: "Implementation Project",
-      price: "$2,000+",
+
       description: "Consent tooling, CMP configuration, and GTM consent fixes.",
     },
     {
       title: "Monthly Monitoring",
-      price: "$300+/mo",
+
       description:
         "Ongoing checks, documentation updates, and change tracking.",
     },

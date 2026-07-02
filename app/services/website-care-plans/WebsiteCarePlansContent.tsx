@@ -30,18 +30,18 @@ export default function WebsiteCarePlansContent({
   const pricingPlans = [
     {
       title: "Essential Care",
-      price: "$150/mo+",
+
       description: "Core updates, monitoring, and backup checks.",
     },
     {
       title: "Growth Care",
-      price: "$300/mo+",
+
       description:
         "Includes content support, compliance checks, and reporting.",
     },
     {
       title: "Enterprise Care",
-      price: "Custom",
+
       description:
         "Multi-site governance, team workflows, and priority support.",
     },

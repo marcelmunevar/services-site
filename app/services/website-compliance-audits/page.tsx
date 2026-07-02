@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ProductizedWebsiteServicesContent from "./ProductizedWebsiteServicesContent";
+import ProductizedWebsiteServicesContent from "./WebsiteComplianceAuditsContent";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
 
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "self-remediation audit report",
   ],
   alternates: {
-    canonical: "/services/productized-website-services",
+    canonical: "/services/website-compliance-audits",
   },
 };
 
@@ -72,7 +72,7 @@ export default function ProductizedServicesPage() {
         "@type": "ListItem",
         position: 3,
         name: "Website Compliance Audits & Checklists",
-        item: `${siteUrl}/services/productized-website-services`,
+        item: `${siteUrl}/services/website-compliance-audits`,
       },
     ],
   };

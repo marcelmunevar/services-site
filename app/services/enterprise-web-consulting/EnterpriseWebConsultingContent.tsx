@@ -53,17 +53,17 @@ export default function EnterpriseWebConsultingContent({
   const pricingPlans = [
     {
       title: "Advisory Sprint",
-      price: "$1,500+",
+
       description: "Focused architecture and implementation planning support.",
     },
     {
       title: "Project Consulting",
-      price: "$4,000+",
+
       description: "End-to-end support for migrations and launch initiatives.",
     },
     {
       title: "Embedded Support",
-      price: "Custom",
+
       description: "Part-time or ongoing enterprise consulting across teams.",
     },
   ];

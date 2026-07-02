@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/website-privacy-compliance",
     "/services/website-care-plans",
     "/services/enterprise-web-consulting",
-    "/services/productized-website-services",
+    "/services/website-compliance-audits",
     "/services/ai-generated-static-websites",
   ];
 

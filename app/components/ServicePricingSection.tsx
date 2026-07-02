@@ -2,7 +2,7 @@ import { Box, Card, CardContent, Typography } from "@mui/material";
 
 type PricingPlan = {
   title: string;
-  price: string;
+  price?: string;
   description: string;
 };
 
@@ -44,9 +44,11 @@ export default function ServicePricingSection({
             <Card key={plan.title}>
               <CardContent>
                 <Typography variant="h4">{plan.title}</Typography>
-                <Typography variant="h3" sx={{ mt: 1 }}>
-                  {plan.price}
-                </Typography>
+                {plan.price ? (
+                  <Typography variant="h3" sx={{ mt: 1 }}>
+                    {plan.price}
+                  </Typography>
+                ) : null}
                 <Typography sx={{ mt: 1, color: "text.secondary" }}>
                   {plan.description}
                 </Typography>

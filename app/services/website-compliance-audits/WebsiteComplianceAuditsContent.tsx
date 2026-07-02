@@ -23,7 +23,7 @@ export default function ProductizedWebsiteServicesContent({
 }: ProductizedWebsiteServicesContentProps) {
   const handleAuditClick = () => {
     posthog.capture("consultation_cta_clicked", {
-      service: "productized-website-services",
+      service: "website-compliance-audits",
     });
   };
 

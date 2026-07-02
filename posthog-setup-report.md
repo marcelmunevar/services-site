@@ -2,18 +2,18 @@
 
 The wizard has completed a deep integration of PostHog analytics into the Web Growth Studio services site. PostHog is initialized client-side via `instrumentation-client.ts` (Next.js 15.3+ pattern), with a reverse proxy configured in `next.config.ts` to route events through `/ingest`. A `TrackableCTA` client component was created to capture explicit click events from the marketing site's key CTAs across all server-component pages. Ten events covering the full conversion funnel — from hero engagement through service discovery to email inquiry — are now instrumented.
 
-| Event name | Description | File |
-|---|---|---|
-| `contact_email_clicked` | User clicks the Email for Inquiries CTA on the home page | `app/page.tsx` |
-| `explore_services_clicked` | User clicks the Explore Services CTA in the home page hero | `app/page.tsx` |
-| `book_discovery_call_clicked` | User clicks the Book a Discovery Call CTA in the home page hero | `app/page.tsx` |
-| `service_card_cta_clicked` | User clicks a View service CTA on a service card on the home page | `app/page.tsx` |
-| `contact_email_clicked` | User clicks the email link on the Contact Us page | `app/contact-us/page.tsx` |
-| `service_card_clicked` | User clicks a View service details link on the services index page | `app/services/page.tsx` |
-| `consultation_cta_clicked` | User clicks the privacy compliance consultation CTA | `app/services/website-privacy-compliance/page.tsx` |
-| `consultation_cta_clicked` | User clicks the care plans consultation CTA | `app/services/website-care-plans/page.tsx` |
-| `consultation_cta_clicked` | User clicks the enterprise consulting contact CTA | `app/services/enterprise-web-consulting/page.tsx` |
-| `consultation_cta_clicked` | User clicks the productized service request CTA | `app/services/productized-website-services/page.tsx` |
+| Event name                    | Description                                                        | File                                               |
+| ----------------------------- | ------------------------------------------------------------------ | -------------------------------------------------- |
+| `contact_email_clicked`       | User clicks the Email for Inquiries CTA on the home page           | `app/page.tsx`                                     |
+| `explore_services_clicked`    | User clicks the Explore Services CTA in the home page hero         | `app/page.tsx`                                     |
+| `book_discovery_call_clicked` | User clicks the Book a Discovery Call CTA in the home page hero    | `app/page.tsx`                                     |
+| `service_card_cta_clicked`    | User clicks a View service CTA on a service card on the home page  | `app/page.tsx`                                     |
+| `contact_email_clicked`       | User clicks the email link on the Contact Us page                  | `app/contact-us/page.tsx`                          |
+| `service_card_clicked`        | User clicks a View service details link on the services index page | `app/services/page.tsx`                            |
+| `consultation_cta_clicked`    | User clicks the privacy compliance consultation CTA                | `app/services/website-privacy-compliance/page.tsx` |
+| `consultation_cta_clicked`    | User clicks the care plans consultation CTA                        | `app/services/website-care-plans/page.tsx`         |
+| `consultation_cta_clicked`    | User clicks the enterprise consulting contact CTA                  | `app/services/enterprise-web-consulting/page.tsx`  |
+| `consultation_cta_clicked`    | User clicks the productized service request CTA                    | `app/services/website-compliance-audits/page.tsx`  |
 
 ## Next steps
 
