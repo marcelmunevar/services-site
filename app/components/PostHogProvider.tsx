@@ -22,26 +22,45 @@ function initPostHog() {
 
 export default function PostHogProvider() {
   useEffect(() => {
-    const tryInit = () => {
-      const consent = (window as any).CY_CONSENT_STATUS;
+    let initialized = false;
 
-      const analyticsAllowed =
-        consent?.analytics === true || consent?.advertisement === true;
+    function getCookie(name: string) {
+      const match = document.cookie.match(
+        new RegExp("(^| )" + name + "=([^;]+)"),
+      );
+      return match ? decodeURIComponent(match[2]) : null;
+    }
 
-      if (analyticsAllowed) {
-        initPostHog();
+    function hasAnalyticsConsent() {
+      const cookie = getCookie("cookieyes-consent");
+      if (!cookie) return false;
+
+      return cookie.includes("analytics:yes");
+    }
+
+    function initIfAllowed() {
+      if (initialized) return;
+
+      if (hasAnalyticsConsent()) {
+        posthog.init(process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN!, {
+          api_host: "/ingest",
+          ui_host: "https://us.posthog.com",
+          defaults: "2026-01-30",
+          capture_exceptions: true,
+          debug: process.env.NODE_ENV === "development",
+        });
+
+        initialized = true;
       }
-    };
+    }
 
-    // initial check
-    tryInit();
+    // initial attempt
+    initIfAllowed();
 
-    // CookieYes updates consent dynamically
-    window.addEventListener("cookieyes_consent_update", tryInit);
+    // watch for cookie changes (CookieYes updates cookie dynamically)
+    const interval = setInterval(initIfAllowed, 1000);
 
-    return () => {
-      window.removeEventListener("cookieyes_consent_update", tryInit);
-    };
+    return () => clearInterval(interval);
   }, []);
 
   return null;
