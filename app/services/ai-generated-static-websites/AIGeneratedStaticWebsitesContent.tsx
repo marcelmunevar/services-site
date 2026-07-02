@@ -1,0 +1,439 @@
+"use client";
+
+import posthog from "posthog-js";
+import NextLink from "next/link";
+import {
+  Box,
+  Breadcrumbs,
+  Button,
+  Card,
+  CardContent,
+  Container,
+  Link,
+  Typography,
+} from "@mui/material";
+import ServiceFaqSection from "../../components/ServiceFaqSection";
+import { bulletListSx } from "../../components/muiListStyles";
+
+type FAQItem = {
+  question: string;
+  answer: string;
+};
+
+type AIGeneratedStaticWebsitesContentProps = {
+  faqs: FAQItem[];
+};
+
+export default function AIGeneratedStaticWebsitesContent({
+  faqs,
+}: AIGeneratedStaticWebsitesContentProps) {
+  const trackConsultation = (source?: string) => {
+    posthog.capture("consultation_cta_clicked", {
+      service: "ai-generated-static-websites",
+      ...(source ? { source } : {}),
+    });
+  };
+
+  return (
+    <Container
+      component="main"
+      maxWidth="lg"
+      sx={{ flex: 1, py: { xs: 6, sm: 8 } }}
+    >
+      <Box sx={{ display: "grid", gap: 4 }}>
+        <Breadcrumbs aria-label="Breadcrumb" separator="/">
+          <Link component={NextLink} href="/" color="inherit" underline="hover">
+            Home
+          </Link>
+          <Link
+            component={NextLink}
+            href="/services"
+            color="inherit"
+            underline="hover"
+          >
+            Services
+          </Link>
+          <Typography color="text.primary" sx={{ fontWeight: 700 }}>
+            AI-Generated Static Websites
+          </Typography>
+        </Breadcrumbs>
+
+        <Card
+          variant="outlined"
+          sx={{
+            borderColor: "rgba(255,255,255,0.7)",
+            borderRadius: "1.8rem",
+            bgcolor: "rgba(255,255,255,0.85)",
+            boxShadow: "0 20px 70px rgba(15, 23, 42, 0.08)",
+            backdropFilter: "blur(8px)",
+          }}
+        >
+          <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
+            <Typography
+              sx={{
+                textTransform: "uppercase",
+                fontSize: "0.75rem",
+                fontWeight: 700,
+                letterSpacing: "0.16em",
+                color: "text.secondary",
+              }}
+            >
+              AI-Generated Static Websites
+            </Typography>
+            <Typography
+              variant="h1"
+              sx={{ mt: 1.5, fontSize: { xs: "2rem", sm: "3rem" } }}
+            >
+              A professional web presence, built with AI and deployed for free
+            </Typography>
+            <Typography
+              sx={{
+                mt: 2,
+                maxWidth: 860,
+                color: "text.secondary",
+                lineHeight: 1.7,
+              }}
+            >
+              Get a fast, fully responsive static website without the cost of
+              traditional web development. AI drafts the content, Next.js powers
+              the build, and Vercel hosts it on a global CDN, often at zero
+              hosting cost.
+            </Typography>
+          </CardContent>
+        </Card>
+
+        <Box
+          sx={{
+            display: "grid",
+            gap: 2.5,
+            gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+          }}
+        >
+          <Card
+            variant="outlined"
+            sx={{
+              borderColor: "rgba(148, 163, 184, 0.35)",
+              borderRadius: "1.5rem",
+              bgcolor: "rgba(255,255,255,0.9)",
+              boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
+            }}
+          >
+            <CardContent sx={{ p: 3 }}>
+              <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
+                What you get
+              </Typography>
+              <Box component="ul" sx={{ mt: 2, pl: 3, ...bulletListSx }}>
+                <li>AI-powered content generation from your brief</li>
+                <li>Next.js static site generation (fast, SEO-friendly)</li>
+                <li>Vercel account creation and project setup</li>
+                <li>Free tier Vercel deployment with global CDN</li>
+                <li>Fully responsive, mobile-first design</li>
+                <li>SEO-optimized markup and metadata</li>
+                <li>Custom domain configuration (you provide the domain)</li>
+                <li>Automatic HTTPS and deployment automation</li>
+                <li>No monthly hosting cost for initial deployment</li>
+              </Box>
+            </CardContent>
+          </Card>
+
+          <Card
+            variant="outlined"
+            sx={{
+              borderColor: "rgba(148, 163, 184, 0.35)",
+              borderRadius: "1.5rem",
+              bgcolor: "rgba(255,255,255,0.9)",
+              boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
+            }}
+          >
+            <CardContent sx={{ p: 3 }}>
+              <Typography variant="h2" sx={{ fontSize: "1.5rem" }}>
+                Best for
+              </Typography>
+              <Box component="ul" sx={{ mt: 2, pl: 3, ...bulletListSx }}>
+                <li>Personal and professional portfolios</li>
+                <li>Product or service landing pages</li>
+                <li>Documentation and knowledge base sites</li>
+                <li>Small business brochure websites</li>
+                <li>Event or campaign pages</li>
+                <li>
+                  Anyone who wants a fast, professional site without ongoing
+                  hosting bills
+                </li>
+              </Box>
+              <Button
+                component={NextLink}
+                href="/#contact"
+                variant="contained"
+                onClick={() => trackConsultation()}
+                sx={{ mt: 3, borderRadius: "9999px", px: 2.5 }}
+              >
+                Book a discovery call
+              </Button>
+            </CardContent>
+          </Card>
+        </Box>
+
+        <Card
+          variant="outlined"
+          sx={{
+            borderColor: "rgba(148, 163, 184, 0.35)",
+            borderRadius: "1.8rem",
+            bgcolor: "rgba(255,255,255,0.9)",
+            boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
+          }}
+        >
+          <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
+            <Typography
+              sx={{
+                textTransform: "uppercase",
+                fontSize: "0.75rem",
+                fontWeight: 700,
+                letterSpacing: "0.16em",
+                color: "text.secondary",
+              }}
+            >
+              Process
+            </Typography>
+            <Typography variant="h2" sx={{ mt: 1.5, fontSize: "2rem" }}>
+              From brief to live site in days
+            </Typography>
+            <Typography
+              sx={{ mt: 1.5, maxWidth: 820, color: "text.secondary" }}
+            >
+              A straightforward process designed to move quickly without
+              sacrificing quality.
+            </Typography>
+
+            <Box
+              sx={{
+                mt: 3,
+                display: "grid",
+                gap: 2,
+                gridTemplateColumns: { xs: "1fr", md: "1fr 1fr 1fr" },
+              }}
+            >
+              <Card variant="outlined" sx={{ borderRadius: "1rem" }}>
+                <CardContent>
+                  <Typography
+                    sx={{
+                      fontSize: "0.8rem",
+                      fontWeight: 700,
+                      color: "#c2410c",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.08em",
+                    }}
+                  >
+                    Step 1
+                  </Typography>
+                  <Typography sx={{ mt: 1, fontSize: "1rem", fontWeight: 700 }}>
+                    AI Generation
+                  </Typography>
+                  <Typography
+                    sx={{ mt: 1, color: "text.secondary", lineHeight: 1.7 }}
+                  >
+                    You share a brief about your goals, audience, and brand. AI
+                    drafts the copy and structure. You review and approve before
+                    anything is built.
+                  </Typography>
+                </CardContent>
+              </Card>
+
+              <Card variant="outlined" sx={{ borderRadius: "1rem" }}>
+                <CardContent>
+                  <Typography
+                    sx={{
+                      fontSize: "0.8rem",
+                      fontWeight: 700,
+                      color: "#c2410c",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.08em",
+                    }}
+                  >
+                    Step 2
+                  </Typography>
+                  <Typography sx={{ mt: 1, fontSize: "1rem", fontWeight: 700 }}>
+                    Build and Review
+                  </Typography>
+                  <Typography
+                    sx={{ mt: 1, color: "text.secondary", lineHeight: 1.7 }}
+                  >
+                    Next.js compiles your approved content into a static site.
+                    You review a preview link and request any final adjustments
+                    before going live.
+                  </Typography>
+                </CardContent>
+              </Card>
+
+              <Card variant="outlined" sx={{ borderRadius: "1rem" }}>
+                <CardContent>
+                  <Typography
+                    sx={{
+                      fontSize: "0.8rem",
+                      fontWeight: 700,
+                      color: "#c2410c",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.08em",
+                    }}
+                  >
+                    Step 3
+                  </Typography>
+                  <Typography sx={{ mt: 1, fontSize: "1rem", fontWeight: 700 }}>
+                    Deploy to Vercel
+                  </Typography>
+                  <Typography
+                    sx={{ mt: 1, color: "text.secondary", lineHeight: 1.7 }}
+                  >
+                    We create your Vercel account, connect your domain, and
+                    deploy. Your site is live on a global CDN with automatic
+                    HTTPS and continuous deployment.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Box>
+          </CardContent>
+        </Card>
+
+        <Card
+          variant="outlined"
+          sx={{
+            borderColor: "rgba(148, 163, 184, 0.35)",
+            borderRadius: "1.8rem",
+            bgcolor: "rgba(255,255,255,0.9)",
+            boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
+          }}
+        >
+          <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
+            <Typography
+              sx={{
+                textTransform: "uppercase",
+                fontSize: "0.75rem",
+                fontWeight: 700,
+                letterSpacing: "0.16em",
+                color: "text.secondary",
+              }}
+            >
+              Hosting and Costs
+            </Typography>
+            <Typography variant="h2" sx={{ mt: 1.5, fontSize: "2rem" }}>
+              Vercel free tier: what is included and what to know
+            </Typography>
+
+            <Box
+              sx={{
+                mt: 3,
+                display: "grid",
+                gap: 3,
+                gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+              }}
+            >
+              <Box>
+                <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
+                  Free tier includes
+                </Typography>
+                <Box component="ul" sx={{ mt: 1.5, pl: 3, ...bulletListSx }}>
+                  <li>Global CDN hosting (100GB bandwidth/month)</li>
+                  <li>Automatic HTTPS and SSL certificates</li>
+                  <li>Custom domain support</li>
+                  <li>Continuous deployment from Git</li>
+                  <li>Preview deployments for every push</li>
+                  <li>Serverless functions (limited invocations)</li>
+                </Box>
+              </Box>
+
+              <Box>
+                <Typography sx={{ fontSize: "0.95rem", fontWeight: 700 }}>
+                  Free tier limitations to note
+                </Typography>
+                <Box component="ul" sx={{ mt: 1.5, pl: 3, ...bulletListSx }}>
+                  <li>100GB bandwidth cap per month</li>
+                  <li>Hobby plan is for personal, non-commercial use</li>
+                  <li>Limited build minutes per month</li>
+                  <li>No team collaboration on free plan</li>
+                  <li>Commercial projects require a Pro plan (paid upgrade)</li>
+                </Box>
+              </Box>
+            </Box>
+
+            <Typography
+              sx={{ mt: 2.5, color: "text.secondary", lineHeight: 1.7 }}
+            >
+              For most portfolios and small business landing pages, the free
+              tier is more than enough. If your site grows, upgrading to Vercel
+              Pro is straightforward and reasonably priced. Your only required
+              ongoing cost is your domain name (typically $10-$20/year).
+            </Typography>
+          </CardContent>
+        </Card>
+
+        <ServiceFaqSection faqs={faqs} eyebrow="FAQ" title="Common questions" />
+
+        <Card
+          variant="outlined"
+          sx={{
+            borderColor: "rgba(15, 23, 42, 0.3)",
+            borderRadius: "1.8rem",
+            bgcolor: "#0f172a",
+            color: "#e2e8f0",
+            boxShadow: "0 16px 55px rgba(2, 8, 20, 0.2)",
+          }}
+        >
+          <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
+            <Typography
+              sx={{
+                textTransform: "uppercase",
+                fontSize: "0.75rem",
+                fontWeight: 700,
+                letterSpacing: "0.16em",
+                color: "#cbd5e1",
+              }}
+            >
+              Get started
+            </Typography>
+            <Typography
+              variant="h2"
+              sx={{ mt: 1.5, fontSize: "2rem", color: "#f8fafc" }}
+            >
+              Ready to launch your site?
+            </Typography>
+            <Typography
+              sx={{ mt: 1.5, maxWidth: 820, color: "#cbd5e1", lineHeight: 1.7 }}
+            >
+              Book a short discovery call to share your goals. I will confirm
+              whether a static site is the right fit, outline the timeline, and
+              explain the cost breakdown (usually just your domain).
+            </Typography>
+            <Box sx={{ mt: 3, display: "flex", flexWrap: "wrap", gap: 1.5 }}>
+              <Button
+                component={NextLink}
+                href="/#contact"
+                variant="contained"
+                onClick={() => trackConsultation("bottom_cta")}
+                sx={{
+                  borderRadius: "9999px",
+                  px: 3,
+                  bgcolor: "#f97316",
+                  "&:hover": { bgcolor: "#ea580c" },
+                }}
+              >
+                Book a discovery call
+              </Button>
+              <Button
+                component={NextLink}
+                href="/services"
+                variant="outlined"
+                sx={{
+                  borderRadius: "9999px",
+                  px: 3,
+                  color: "#cbd5e1",
+                  borderColor: "#475569",
+                }}
+              >
+                View all services
+              </Button>
+            </Box>
+          </CardContent>
+        </Card>
+      </Box>
+    </Container>
+  );
+}
