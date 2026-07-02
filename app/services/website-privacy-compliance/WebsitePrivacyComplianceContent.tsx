@@ -3,9 +3,6 @@
 import posthog from "posthog-js";
 import NextLink from "next/link";
 import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
   Box,
   Breadcrumbs,
   Button,
@@ -13,10 +10,10 @@ import {
   CardContent,
   Container,
   Link,
-  Stack,
   Typography,
 } from "@mui/material";
 import { bulletListSx } from "../../components/muiListStyles";
+import ServiceFaqSection from "../../components/ServiceFaqSection";
 
 type FAQItem = {
   question: string;
@@ -45,7 +42,7 @@ export default function WebsitePrivacyComplianceContent({
         py: { xs: 6, sm: 8 },
       }}
     >
-      <Stack spacing={4}>
+      <Box sx={{ display: "grid", gap: 4 }}>
         <Breadcrumbs aria-label="Breadcrumb" separator="/">
           <Link component={NextLink} href="/" color="inherit" underline="hover">
             Home
@@ -274,66 +271,12 @@ export default function WebsitePrivacyComplianceContent({
           </CardContent>
         </Card>
 
-        <Card
-          variant="outlined"
-          sx={{
-            borderColor: "rgba(148, 163, 184, 0.35)",
-            borderRadius: "1.8rem",
-            bgcolor: "rgba(255,255,255,0.9)",
-            boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
-          }}
-        >
-          <CardContent sx={{ p: { xs: 3, sm: 5 } }}>
-            <Typography
-              sx={{
-                textTransform: "uppercase",
-                fontSize: "0.75rem",
-                fontWeight: 700,
-                letterSpacing: "0.16em",
-                color: "text.secondary",
-              }}
-            >
-              FAQ
-            </Typography>
-            <Typography variant="h2" sx={{ mt: 1.5, fontSize: "2rem", mb: 2 }}>
-              Website privacy compliance FAQs
-            </Typography>
-
-            <Stack spacing={1.25}>
-              {faqs.map((faq) => (
-                <Accordion
-                  key={faq.question}
-                  disableGutters
-                  elevation={0}
-                  sx={{
-                    border: "1px solid rgba(148, 163, 184, 0.35)",
-                    borderRadius: "1rem",
-                    "&:before": {
-                      display: "none",
-                    },
-                  }}
-                >
-                  <AccordionSummary
-                    sx={{
-                      fontWeight: 700,
-                      color: "text.primary",
-                    }}
-                  >
-                    {faq.question}
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography
-                      sx={{ color: "text.secondary", lineHeight: 1.7 }}
-                    >
-                      {faq.answer}
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-              ))}
-            </Stack>
-          </CardContent>
-        </Card>
-      </Stack>
+        <ServiceFaqSection
+          faqs={faqs}
+          eyebrow="FAQ"
+          title="Website privacy compliance FAQs"
+        />
+      </Box>
     </Container>
   );
 }

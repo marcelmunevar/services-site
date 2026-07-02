@@ -13,6 +13,7 @@ import {
   Typography,
 } from "@mui/material";
 import { bulletListSx } from "../../components/muiListStyles";
+import ServiceFaqSection from "../../components/ServiceFaqSection";
 
 type FAQItem = {
   question: string;
@@ -177,33 +178,7 @@ export default function DNSManagementEdgeServicesContent({
           </Card>
         </Box>
 
-        <Card
-          variant="outlined"
-          sx={{
-            borderColor: "rgba(148, 163, 184, 0.35)",
-            borderRadius: "1.5rem",
-            bgcolor: "rgba(255,255,255,0.9)",
-            boxShadow: "0 16px 55px rgba(2, 8, 20, 0.08)",
-          }}
-        >
-          <CardContent sx={{ p: { xs: 3, sm: 4 } }}>
-            <Typography variant="h2" sx={{ fontSize: "2rem" }}>
-              Frequently asked questions
-            </Typography>
-            <Stack spacing={3} sx={{ mt: 3 }}>
-              {faqs.map((faq) => (
-                <Box key={faq.question}>
-                  <Typography variant="h3" sx={{ fontSize: "1.1rem", mb: 1 }}>
-                    {faq.question}
-                  </Typography>
-                  <Typography sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-                    {faq.answer}
-                  </Typography>
-                </Box>
-              ))}
-            </Stack>
-          </CardContent>
-        </Card>
+        <ServiceFaqSection faqs={faqs} title="Frequently asked questions" />
       </Stack>
     </Container>
   );
