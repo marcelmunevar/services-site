@@ -9,6 +9,7 @@ export default function Home() {
     description:
       "Professional web services with 7+ years supporting enterprise compliance implementations across multi-subsidiary organizations.",
     serviceType: [
+      "DNS Management & Edge Services",
       "Website Privacy Compliance",
       "Website Care Plans",
       "Enterprise Web Consulting",
@@ -20,6 +21,14 @@ export default function Home() {
       "@type": "OfferCatalog",
       name: "Web Growth Studio Services",
       itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "DNS Management & Edge Services",
+            url: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com"}/services/dns-management-edge-services`,
+          },
+        },
         {
           "@type": "Offer",
           itemOffered: {
@@ -75,6 +84,21 @@ export default function Home() {
 
   const serviceTracks = [
     {
+      title: "DNS Management & Edge Services",
+      value: "Client-owned Cloudflare setup and managed DNS operations",
+      points: [
+        "Client-owned Cloudflare account onboarding",
+        "DNS migration planning and record validation",
+        "Nameserver cutover support",
+        "SSL/TLS hardening and redirect strategy",
+        "CDN caching and edge performance tuning",
+        "WAF baseline and bot protection setup",
+        "Ongoing DNS and edge change support",
+      ],
+      cta: "View DNS service",
+      href: "/services/dns-management-edge-services",
+    },
+    {
       title: "Website Privacy Compliance",
       value: "Technical implementation and ongoing assurance",
       points: [
@@ -120,7 +144,8 @@ export default function Home() {
     },
     {
       title: "Website Compliance Audits & Checklists",
-      value: "Independent audits and reports for teams that want to self-remediate",
+      value:
+        "Independent audits and reports for teams that want to self-remediate",
       points: [
         "Website compliance audit report (privacy, security, accessibility)",
         "Detailed findings with remediation priorities",
@@ -135,7 +160,8 @@ export default function Home() {
     },
     {
       title: "AI-Generated Static Websites",
-      value: "Cost-effective static sites built with AI, deployed to Vercel's free tier",
+      value:
+        "Cost-effective static sites built with AI, deployed to Vercel's free tier",
       points: [
         "AI-powered content generation",
         "Next.js static site generation",
@@ -271,7 +297,7 @@ export default function Home() {
               Services
             </p>
             <h2 className="display-font text-3xl text-slate-950 sm:text-4xl">
-              Five core services I offer
+              Six core services I offer
             </h2>
           </div>
 

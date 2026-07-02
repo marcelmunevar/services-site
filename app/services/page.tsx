@@ -15,6 +15,12 @@ export const metadata: Metadata = {
 
 const services = [
   {
+    title: "DNS Management & Edge Services",
+    href: "/services/dns-management-edge-services",
+    description:
+      "Client-owned Cloudflare setup and managed DNS/edge operations including migrations, DNS records, SSL/TLS hardening, CDN and WAF tuning, and ongoing change support.",
+  },
+  {
     title: "Website Privacy Compliance",
     href: "/services/website-privacy-compliance",
     description:
