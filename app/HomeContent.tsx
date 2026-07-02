@@ -116,7 +116,7 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
                 </Button>
                 <Button
                   component={NextLink}
-                  href="#contact"
+                  href="/contact-us"
                   variant="outlined"
                   onClick={() => trackEvent("book_discovery_call_clicked")}
                 >
@@ -346,7 +346,7 @@ export default function HomeContent({ serviceTracks }: HomeContentProps) {
             <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1.5 }}>
               <Button
                 component={Link}
-                href="mailto:hello@example.com"
+                href="/contact-us"
                 variant="contained"
                 onClick={() =>
                   trackEvent("contact_email_clicked", {

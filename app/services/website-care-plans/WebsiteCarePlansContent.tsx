@@ -115,7 +115,7 @@ export default function WebsiteCarePlansContent({
             ],
             cta: {
               label: "Ask about monthly website care plans",
-              href: "/#contact",
+              href: "/contact-us",
               onClick: handleConsultationClick,
             },
           }}

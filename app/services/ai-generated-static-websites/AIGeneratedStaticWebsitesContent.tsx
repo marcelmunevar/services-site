@@ -109,7 +109,7 @@ export default function AIGeneratedStaticWebsitesContent({
             ],
             cta: {
               label: "Book a discovery call",
-              href: "/#contact",
+              href: "/contact-us",
               onClick: () => trackConsultation(),
             },
           }}
@@ -274,7 +274,7 @@ export default function AIGeneratedStaticWebsitesContent({
             <Box sx={{ mt: 3, display: "flex", flexWrap: "wrap", gap: 1.5 }}>
               <Button
                 component={NextLink}
-                href="/#contact"
+                href="/contact-us"
                 variant="contained"
                 onClick={() => trackConsultation("bottom_cta")}
               >

@@ -120,7 +120,7 @@ export default function WebsitePrivacyComplianceContent({
             ],
             cta: {
               label: "Request a privacy compliance consultation",
-              href: "/#contact",
+              href: "/contact-us",
               onClick: handleConsultationClick,
             },
           }}

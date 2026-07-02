@@ -115,7 +115,7 @@ export default function ProductizedWebsiteServicesContent({
             ],
             cta: {
               label: "Request an audit package",
-              href: "/#contact",
+              href: "/contact-us",
               onClick: handleAuditClick,
             },
           }}
