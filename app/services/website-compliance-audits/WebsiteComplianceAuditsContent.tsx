@@ -30,17 +30,14 @@ export default function ProductizedWebsiteServicesContent({
   const pricingPlans = [
     {
       title: "Single Audit",
-      price: "$600+",
       description: "One focused audit with prioritized recommendations.",
     },
     {
       title: "Audit + Guide",
-      price: "$1,200+",
       description: "Adds implementation guide and team-ready documentation.",
     },
     {
       title: "Bundle Package",
-      price: "$2,500+",
       description:
         "Multiple audit deliverables with coordinated handoff support.",
     },
