@@ -11,6 +11,23 @@ type ServiceDefinition = {
 
 const serviceDefinitions: ServiceDefinition[] = [
   {
+    title: "Website Privacy Compliance",
+    href: "/services/website-privacy-compliance",
+    servicesDescription:
+      "Cookie consent audits, consent management platform implementation, consent mode configuration, tag governance, and privacy-aware analytics.",
+    homeValue: "Technical implementation and ongoing assurance",
+    homePoints: [
+      "Cookie consent audits",
+      "Consent implementation",
+      "OneTrust/CookiePro setup",
+      "Privacy policy implementation",
+      "Google Tag Manager consent fixes",
+      "Cross-subsidiary rollout support",
+      "Monthly compliance monitoring",
+    ],
+    homeCta: "View compliance service",
+  },
+  {
     title: "DNS Management & Edge Services",
     href: "/services/dns-management-edge-services",
     servicesDescription:
@@ -26,23 +43,6 @@ const serviceDefinitions: ServiceDefinition[] = [
       "Ongoing DNS and edge change support",
     ],
     homeCta: "View DNS service",
-  },
-  {
-    title: "Website Privacy Compliance",
-    href: "/services/website-privacy-compliance",
-    servicesDescription:
-      "Cookie consent audits, consent implementation, OneTrust setup, privacy policy implementation, and GTM consent fixes.",
-    homeValue: "Technical implementation and ongoing assurance",
-    homePoints: [
-      "Cookie consent audits",
-      "Consent implementation",
-      "OneTrust/CookiePro setup",
-      "Privacy policy implementation",
-      "Google Tag Manager consent fixes",
-      "Cross-subsidiary rollout support",
-      "Monthly compliance monitoring",
-    ],
-    homeCta: "View compliance service",
   },
   {
     title: "Website Care Plans",

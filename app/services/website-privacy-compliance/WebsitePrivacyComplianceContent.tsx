@@ -31,42 +31,40 @@ export default function WebsitePrivacyComplianceContent({
 
   const guidancePoints = [
     {
-      title: "Start with implementation risk",
-      body: "This service fits teams that already know privacy matters but need a practical path to cleaner implementation.",
+      title: "Assess your current implementation",
+      body: "Review your consent management platform, analytics, tags, and privacy-related website behavior to identify implementation gaps and opportunities for improvement.",
     },
     {
-      title: "Use it to stabilize operations",
-      body: "It helps when consent tooling, tags, or analytics setup are creating friction across marketing and compliance work.",
+      title: "Prioritize the right changes",
+      body: "Create a practical remediation plan based on your website, tracking technologies, and business priorities.",
     },
     {
-      title: "Keep legal and technical work aligned",
-      body: "The focus stays on execution while coordinating with legal teams when interpretation is required.",
+      title: "Implement and validate",
+      body: "Configure consent tooling, update tag behavior, validate analytics, document changes, and confirm the implementation works as intended.",
     },
   ];
 
   const proofPoints = [
-    { value: "CMP", label: "Consent tooling support" },
-    { value: "GTM", label: "Tag governance and fixes" },
-    { value: "Ongoing", label: "Monitoring options available" },
+    { value: "CMP", label: "Consent platform implementation" },
+    { value: "GTM", label: "Tag governance and consent mode" },
+    { value: "Ongoing", label: "Monitoring and maintenance available" },
   ];
 
   const packagePlans = [
     {
       title: "Audit Sprint",
-
       description:
-        "Consent and tag audit with prioritized implementation plan.",
+        "Review your current implementation and receive a prioritized remediation plan.",
     },
     {
       title: "Implementation Project",
-
-      description: "Consent tooling, CMP configuration, and GTM consent fixes.",
+      description:
+        "Implement consent tooling, configure tags, and validate your privacy setup.",
     },
     {
       title: "Monthly Monitoring",
-
       description:
-        "Ongoing checks, documentation updates, and change tracking.",
+        "Ongoing monitoring, implementation updates, documentation, and change tracking.",
     },
   ];
 
@@ -84,18 +82,18 @@ export default function WebsitePrivacyComplianceContent({
 
         <ServiceHeroPanel
           eyebrow="Website Privacy Compliance"
-          title="Privacy implementation for modern marketing websites"
-          description="Get support for consent tooling, tag governance, and privacy-compliant analytics setup without slowing down your marketing operations."
+          title="Privacy implementation for modern websites"
+          description="Get practical support implementing consent management, governing tags, and configuring privacy-aware analytics. Whether you're launching a new website, improving an existing implementation, or preparing for a compliance review, the focus is on reliable technical execution—not legal advice."
           proofPoints={proofPoints}
-          sideTitle="How to use this service"
+          sideTitle="How this service works"
           guidancePoints={guidancePoints}
         />
 
         <ServiceFitSection
-          eyebrow="Engagement fit"
-          title="Best when privacy work is blocking marketing execution"
-          description="This service is useful when teams need a cleaner operational setup for consent, analytics, and governance without turning the engagement into a legal advisory project."
-          callout="It works well for organizations that need implementation help, coordination, and documented changes that internal teams can continue to manage."
+          eyebrow="When this service is a good fit"
+          title="Technical privacy implementation for websites of any size"
+          description="This service is designed for organizations that need help implementing or improving website privacy controls. Engagements may include new website launches, consent platform deployments, analytics updates, tag cleanup, or ongoing maintenance."
+          callout="Whether you're starting from scratch or refining an existing implementation, the goal is to deliver a privacy setup your team can confidently maintain."
         />
 
         <ServiceTwoColumnListSection
@@ -103,23 +101,28 @@ export default function WebsitePrivacyComplianceContent({
             title: "Included services",
             items: [
               "Cookie consent audits and remediation planning",
-              "Consent implementation and validation",
-              "OneTrust or CookiePro setup and configuration",
-              "Google Tag Manager consent fixes and governance",
+              "Consent management platform implementation and configuration",
+              "OneTrust or CookiePro setup and optimization",
+              "Google Tag Manager consent implementation and governance",
+              "Privacy-aware analytics configuration",
               "Privacy policy implementation support",
-              "Monthly compliance monitoring options",
+              "Consent validation and testing",
+              "Documentation and implementation guidance",
+              "Optional ongoing monitoring and maintenance",
             ],
           }}
           right={{
             title: "Ideal for",
             items: [
-              "Marketing teams running paid media across regions",
-              "Organizations using multiple consent tools or tag containers",
-              "Teams preparing for internal or external compliance reviews",
-              "Companies that need implementation help, not legal advice",
+              "Businesses implementing website privacy controls for the first time",
+              "Organizations updating an existing consent management platform",
+              "Marketing teams improving analytics and tag governance",
+              "Companies preparing for compliance reviews or internal audits",
+              "Agencies needing implementation support for client websites",
+              "Organizations managing one or multiple websites",
             ],
             cta: {
-              label: "Request a privacy compliance consultation",
+              label: "Request a privacy consultation",
               href: "/contact-us",
               onClick: handleConsultationClick,
             },
@@ -129,7 +132,7 @@ export default function WebsitePrivacyComplianceContent({
         <ServicePricingSection
           eyebrow="Packages"
           title="Privacy compliance package options"
-          description="Typical ranges shown for planning. Final scope and pricing depend on your platform complexity, tags, and number of sites."
+          description="Typical engagement ranges are shown for planning purposes. Final scope and pricing depend on website size, implementation complexity, consent platform requirements, and the number of websites involved."
           plans={packagePlans}
         />
 
