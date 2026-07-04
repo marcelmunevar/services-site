@@ -3,23 +3,6 @@
 import { useEffect } from "react";
 import posthog from "posthog-js";
 
-let initialized = false;
-
-function initPostHog() {
-  if (initialized) return;
-  if (typeof window === "undefined") return;
-
-  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN!, {
-    api_host: "/ingest",
-    ui_host: "https://us.posthog.com",
-    defaults: "2026-01-30",
-    capture_exceptions: true,
-    debug: process.env.NODE_ENV === "development",
-  });
-
-  initialized = true;
-}
-
 export default function PostHogProvider() {
   useEffect(() => {
     let initialized = false;

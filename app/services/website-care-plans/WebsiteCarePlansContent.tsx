@@ -1,7 +1,7 @@
 "use client";
 
 import posthog from "posthog-js";
-import { Box, Card, CardContent, Container, Typography } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import ServiceBreadcrumbs from "../../components/ServiceBreadcrumbs";
 import ServiceFitSection from "../../components/ServiceFitSection";
 import ServiceHeroPanel from "../../components/ServiceHeroPanel";

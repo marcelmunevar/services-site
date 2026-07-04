@@ -1,14 +1,12 @@
 "use client";
 
 import posthog from "posthog-js";
-import NextLink from "next/link";
 import { Box, Container } from "@mui/material";
 import ServiceBreadcrumbs from "../../components/ServiceBreadcrumbs";
 import ServiceFitSection from "../../components/ServiceFitSection";
 import ServiceHeroPanel from "../../components/ServiceHeroPanel";
 import ServicePricingSection from "../../components/ServicePricingSection";
 import ServiceTwoColumnListSection from "../../components/ServiceTwoColumnListSection";
-import { bulletListSx } from "../../components/muiListStyles";
 import ServiceFaqSection from "../../components/ServiceFaqSection";
 
 type FAQItem = {

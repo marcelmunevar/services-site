@@ -1,7 +1,6 @@
 "use client";
 
-import NextLink from "next/link";
-import { Box, Container, Stack } from "@mui/material";
+import { Container, Stack } from "@mui/material";
 import ServiceBreadcrumbs from "../../components/ServiceBreadcrumbs";
 import ServiceFitSection from "../../components/ServiceFitSection";
 import ServiceFaqSection from "../../components/ServiceFaqSection";
