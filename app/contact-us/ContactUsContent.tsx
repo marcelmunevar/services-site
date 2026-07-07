@@ -8,7 +8,6 @@ import {
   Card,
   CardContent,
   Container,
-  Link,
   Stack,
   TextField,
   Typography,
@@ -38,25 +37,6 @@ export default function ContactUsContent() {
           Share your website goals and current setup. We will recommend the
           right engagement model and next steps.
         </Typography>
-
-        <Card>
-          <CardContent sx={{ p: 3 }}>
-            <Typography variant="h2" sx={{ mb: 1 }}>
-              Email
-            </Typography>
-            <Typography sx={{ color: "text.secondary" }}>
-              Send inquiries to{" "}
-              <Link
-                href="mailto:hello@example.com"
-                onClick={handleEmailClick}
-                sx={{ color: "text.primary", fontWeight: 700 }}
-              >
-                hello@example.com
-              </Link>
-              .
-            </Typography>
-          </CardContent>
-        </Card>
 
         <Card>
           <CardContent sx={{ p: 3 }}>
